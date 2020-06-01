@@ -1,0 +1,21 @@
+# == Schema Information
+#
+# Table name: servers
+#
+#  id         :bigint           not null, primary key
+#  private    :boolean          not null
+#  name       :string           not null
+#  owner_id   :integer          not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+one:
+  private: false
+  name: MyString
+  owner_id: 1
+
+two:
+  private: false
+  name: MyString
+  owner_id: 1
