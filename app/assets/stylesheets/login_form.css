@@ -1,0 +1,99 @@
+.page-container {
+    /* display: flex;
+    justify-content: center; */
+    background-color: darkgray;
+    width: 1400px;
+    height: 800px;
+}
+
+.login-form-container {
+    /* position: relative; */
+    width: 400px;
+    height: 400px;
+    background-color: #36393F;
+    padding: 32px;
+}
+
+.login-form-box {
+
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 20px;
+    /* font-weight: 600px;
+    font-size: 12px;
+    text-transform: capitalize;
+    color: #8E9297; */
+}
+
+.label {
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #8E9297;
+
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.login-input {
+    padding: 10px;
+    border: 1px solid #1f1f1f;
+    border-radius: 5px;
+    background-color: #2d2f33;
+    
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+.login-submit {
+    color: white;
+    background-color: #7489d6;
+    
+    padding: 10px;
+    border: 1px solid #36393F;
+    border-radius: 5px;
+}
+
+.wandbanner {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    padding: 14px;
+
+    font-size: 18px;
+    color: white;
+}
+
+.wand {
+
+}
+
+.x {
+
+}
+
+.fyp {
+    font-size: 14px;
+    color: #7489d6;
+}
+
+.welcome {
+    /* position: absolute; */
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.excited {
+    text-align: center;
+    font-size: 16px;
+    color: #B9BBBE;
+
+}
