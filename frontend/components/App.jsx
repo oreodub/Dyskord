@@ -8,10 +8,11 @@ const App = () => (
         <header>
             <h1>dyskord from app</h1>
         </header>
-        <Switch>
-            <Route path="/login" component={LogInFormContainer} />
-            <Route path="/signup" component={SignUpFormContainer} />
-        </Switch>
+        <Link to="/login">Login</Link>
+
+        <Route path="/login" component={LogInFormContainer} />
+        <Route path="/signup" component={SignUpFormContainer} />
+        
     </div>
 );
 
