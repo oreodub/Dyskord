@@ -1,17 +1,25 @@
 .page-container {
-    /* display: flex;
-    justify-content: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: darkgray;
     width: 1400px;
     height: 800px;
+    font-family: 'Whitney A', 'Whitney B', 'Helvetica Neue', 'Arial', sans-serif;
+
 }
 
 .login-form-container {
     /* position: relative; */
-    width: 400px;
-    height: 400px;
+    /* margin: 0 auto;
+    width: 850px;
+    height: 440px;
     background-color: #36393F;
     padding: 32px;
+    border-radius: 5px; */
+
+    width: 410px;
+    margin-right: 30px;
 }
 
 .login-form-box {
@@ -35,6 +43,7 @@
     text-transform: uppercase;
     color: #8E9297;
 
+    /* margin: 0 auto; */
     margin-top: 7px;
     margin-bottom: 7px;
 }
@@ -53,23 +62,32 @@
 .login-submit {
     color: white;
     background-color: #7489d6;
-    
-    padding: 10px;
+
+    font-size: 16px;
+    text-transform: capitalize;
+
+    padding: 12px;
     border: 1px solid #36393F;
     border-radius: 5px;
+    margin-bottom: 8px;
 }
 
 .wandbanner {
     display: flex;
     justify-content: space-between;
-    width: 400px;
+    margin: 0 auto;
+    width: 700px;
     padding: 14px;
 
+    background-color: #36393F;
     font-size: 18px;
     color: white;
+    margin-bottom: 50px;
+    border-radius: 5px;
 }
 
 .wand {
+    font-size: 16px;
 
 }
 
@@ -80,20 +98,66 @@
 .fyp {
     font-size: 14px;
     color: #7489d6;
+    margin-bottom: 20px;
 }
 
-.welcome {
+.h1 {
     /* position: absolute; */
     text-align: center;
     font-size: 24px;
     font-weight: 600;
+    line-height: 30px;
     color: white;
     margin-bottom: 8px;
 }
 
-.excited {
+.h2 {
     text-align: center;
     font-size: 16px;
+    line-height: 20px;
     color: #B9BBBE;
 
+}
+
+.naa {
+    font-size: 14px;
+    color: #72767d;
+
+    margin-top: 4px;
+}
+
+.register { 
+    font-size: 14px;
+    color: #7489d6;
+}
+
+.qr-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.login-qr-container {
+    display: flex;
+    flex-direction: row;
+
+    margin: 0 auto;
+    width: 850px;
+    height: 440px;
+    background-color: #36393F;
+    padding: 32px;
+    border-radius: 5px;
+}
+
+strong {
+    font-weight: 600;
+}
+
+.qrcode {
+  /* background-image: url(../images/frame.png); */
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  margin: 0 auto;
 }

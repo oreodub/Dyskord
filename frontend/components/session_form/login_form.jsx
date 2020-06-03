@@ -1,4 +1,5 @@
 import React from 'react';
+// import qrcode from '../../../app/assets/images/frame.png'
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -34,45 +35,67 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div className="page-container">
+
+        <div style={{textAlign: 'center'}}>DYSKORD</div>
+
         <div className="wandbanner">
-          <p className="wand">We are now Discord.com!</p>
-          <p className="x">x</p>
+          <div>IMG</div>
+          <div className="wand">We are now Discord.com!</div>
+          <div className="x">x</div>
         </div>
 
-        <div className="login-form-container">
-          
-          <p className ="welcome">Welcome back!</p>
-          <p className ="excited">We're so excited to see you again!</p>
-          
-          <form onSubmit={this.handleSubmit} className="login-form-box">
+        <div className="login-qr-container">
+          <div className="login-form-container">
+            
+            <div className="h1">Welcome back!</div>
+            <div className="h2">We're so excited to see you again!</div>
+            
+            <form onSubmit={this.handleSubmit} className="login-form-box">
 
-            {this.renderErrors()}
+              {this.renderErrors()}
 
-            <div className="login-form">
+              <div className="login-form">
                 <label className="label">Email</label>
-                    <input type="text"
+                  <input type="text"
                     value={this.state.email}
                     onChange={this.update('email')}
                     className="login-input"
                   />
 
 
-                <label className="label">Password</label>
+                  <label className="label">Password</label>
                   <input type="password"
                     value={this.state.password}
                     onChange={this.update('password')}
                     className="login-input"
                   />
 
-                  <p className="fyp">Forgot your password?</p>
-                  
-                <input className="login-submit" type="submit" value={this.props.formType} />
+                  <div className="fyp">Forgot your password?</div>
+                    
+                  <input className="login-submit" type="submit" value={this.props.formType} />
+
+
               </div>
 
-          </form>
+            </form>
+      
+            {this.props.navLink}
 
-          <h3>{this.props.navLink}</h3>
+                  
+          </div>
+
+          <div className="qr-container">
+            {/* <div> <img src={qrcode} alt="QRCode"/> </div> */}
+            {/* <div className="qrcode"></div> */}
+            <div className="qrcode">QR CODE EVENTUALLY</div>
+            <div className="h1">Log in with this QR Code</div>
+            <div className="h2">Scan this with the {' '}
+              <strong>Discord Mobile app {' '}</strong>
+                    to log in instantly.</div>
+          </div>
+
         </div>
+
       </div>
     );
   }
