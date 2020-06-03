@@ -15,38 +15,47 @@ class SignupForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.processForm(this.state);
+    this.props.signup(this.state);
   }
 
-  renderErrors() {
-    if (!this.props.errors.length) return;
-    return (
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
-    );
-  }
+  // renderErrors() {
+  //   if (!this.props.errors.length) return;
+  //   return (
+  //     <ul>
+  //       {this.props.errors.map((error, i) => (
+  //         <li key={`error-${i}`}>
+  //           {error}
+  //         </li>
+  //       ))}
+  //     </ul>
+  //   );
+  // }
 
   render() {
     return (
-      <div className="signup-form-container">
+      <div className="m-container">
         <h1>{this.props.formType}</h1>
         
-        
-        <form onSubmit={this.handleSubmit} className="signup-form-box">
-          
-          {this.renderErrors()}
+        <h1>AAGWGAGAAGAWGA
+          AAGWGAGAAGAWGAAGAWG
 
-          <div className="login-form">
+          aGWWAE
+          ADAWD
+
+          ADASAS
+          
+        </h1>
+        
+        <form onSubmit={this.handleSubmit} className="m-box">
+          
+          {/* {this.renderErrors()} */}
+
+          <div className="m">
             <label>Username:
                 <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
-                className="signup-input"
+                className="ut"
               />
             </label>
 
@@ -54,7 +63,7 @@ class SignupForm extends React.Component {
                 <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
-                className="signup-input"
+                className="ut"
               />
             </label>
 
@@ -63,11 +72,11 @@ class SignupForm extends React.Component {
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
-                className="signup-input"
+                className="ut"
               />
             </label>
               
-            <input className="signup-submit" type="submit" value={this.props.formType} />
+            <input className="mit" type="submit" value={this.props.formType} />
           </div>
           
         </form>

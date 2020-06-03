@@ -1,5 +1,4 @@
 import React from 'react';
-// import qrcode from '../../../app/assets/images/frame.png'
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -35,7 +34,8 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div className="page-container">
-
+        {/* <img src={window.loginbgURL} className="loginbg" /> */}
+        {/* <div className="loginbg"></div> */}
         <div style={{textAlign: 'center'}}>DYSKORD</div>
 
         <div className="wandbanner">
@@ -70,7 +70,8 @@ class LoginForm extends React.Component {
                     className="login-input"
                   />
 
-                  <div className="fyp">Forgot your password?</div>
+                  <a href="#" className="fyp">Forgot your password?</a>
+                  {/* <div className="fyp">Forgot your password?</div> */}
                     
                   <input className="login-submit" type="submit" value={this.props.formType} />
 
@@ -87,8 +88,8 @@ class LoginForm extends React.Component {
           <div className="qr-container">
             {/* <div> <img src={qrcode} alt="QRCode"/> </div> */}
             {/* <div className="qrcode"></div> */}
-            <div className="qrcode">QR CODE EVENTUALLY</div>
-            <div className="h1">Log in with this QR Code</div>
+            <div className="qrcode-container"><img src={window.qrcodeURL} className="qrcode" /></div>
+            <div className="h1">Log in with QR Code</div>
             <div className="h2">Scan this with the {' '}
               <strong>Discord Mobile app {' '}</strong>
                     to log in instantly.</div>
