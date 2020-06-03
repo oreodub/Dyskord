@@ -14,8 +14,33 @@
  *= require_self
  */
 
- .clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+ 
+h1, h2, h3, h4, label, input, li, ul, div {
+  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.blue {
+  color: #7489d6;
+}
+
+.lightgray {
+  color: #8E9297;
+}
+
+.lightergray {
+  color: #B9BBBE;
+}
+
+.darkgray {
+  color: #72767d;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }

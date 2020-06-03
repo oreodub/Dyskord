@@ -33,55 +33,58 @@ class SignupForm extends React.Component {
 
   render() {
     return (
-      <div className="m-container">
-        <h1>{this.props.formType}</h1>
-        
-        <h1>AAGWGAGAAGAWGA
-          AAGWGAGAAGAWGAAGAWG
+      <div className="page-container">
 
-          aGWWAE
-          ADAWD
+        <div className="sessionbg"></div>
 
-          ADASAS
+        <div style={{ textAlign: 'center' }}>DYSKORD</div>
+      
+        <div className="signup-form-container">
           
-        </h1>
-        
-        <form onSubmit={this.handleSubmit} className="m-box">
+          <div className="h1">Create an account</div>
           
-          {/* {this.renderErrors()} */}
+          <h1></h1>
+          
+          <form onSubmit={this.handleSubmit} className="signup-form-box">
+            
+            {/* {this.renderErrors()} */}
 
-          <div className="m">
-            <label>Username:
-                <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="ut"
-              />
-            </label>
+            <div className="session-form">
 
-            <label>Email:
-                <input type="text"
-                value={this.state.email}
-                onChange={this.update('email')}
-                className="ut"
-              />
-            </label>
+              <label className="lightgray">Email</label>
+                  <input type="text"
+                  onChange={this.update('email')}
+                  className="session-input"
+                />
 
-
-            <label>Password:
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="ut"
-              />
-            </label>
+              <label className="lightgray">Username</label>
+                  <input type="text"
+                  onChange={this.update('username')}
+                  className="session-input"
+                />
+             
+              <label className="lightgray">Password</label>
+                <input type="password"
+                  onChange={this.update('password')}
+                  className="session-input"
+                />
               
-            <input className="mit" type="submit" value={this.props.formType} />
-          </div>
-          
-        </form>
+                
+              <input className="session-submit" type="submit" value="Continue" />
+            </div>
+            
+          </form>
 
-        <h3>{this.props.navLink}</h3>
+          {this.props.navLink}
+
+          <div className="tos darkgray">By registering, you agree to Dyskord's {' '}
+              <a className="blue" href="">Terms of Service {' '}</a>
+              and {' '}
+              <a className="blue" href="">Privacy Policy</a>
+              .
+          </div>
+
+        </div>
       </div>
     );
   }

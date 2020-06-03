@@ -15,7 +15,7 @@ class LoginForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.processForm(this.state);
+    this.props.login(this.state);
   }
 
   renderErrors() {
@@ -34,46 +34,47 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div className="page-container">
-        {/* <img src={window.loginbgURL} className="loginbg" /> */}
-        {/* <div className="loginbg"></div> */}
+        
+        <div className="sessionbg"></div>
+
         <div style={{textAlign: 'center'}}>DYSKORD</div>
 
         <div className="wandbanner">
           <div>IMG</div>
-          <div className="wand">We are now Discord.com!</div>
-          <div className="x">x</div>
+          <div style={{fontSize: '16px'}}>We are now Discord.com!</div>
+          <div className="x lightergray">x</div>
         </div>
 
         <div className="login-qr-container">
           <div className="login-form-container">
             
             <div className="h1">Welcome back!</div>
-            <div className="h2">We're so excited to see you again!</div>
+            <div className="h2 lightergray">We're so excited to see you again!</div>
             
             <form onSubmit={this.handleSubmit} className="login-form-box">
 
               {this.renderErrors()}
 
-              <div className="login-form">
-                <label className="label">Email</label>
+              <div className="session-form">
+                <label className="lightgray">Email</label>
                   <input type="text"
                     value={this.state.email}
                     onChange={this.update('email')}
-                    className="login-input"
+                    className="session-input"
                   />
 
 
-                  <label className="label">Password</label>
+                <label className="lightgray">Password</label>
                   <input type="password"
                     value={this.state.password}
                     onChange={this.update('password')}
-                    className="login-input"
+                    className="session-input"
                   />
 
                   <a href="#" className="fyp">Forgot your password?</a>
                   {/* <div className="fyp">Forgot your password?</div> */}
                     
-                  <input className="login-submit" type="submit" value={this.props.formType} />
+                  <input className="session-submit" type="submit" value={this.props.formType} />
 
 
               </div>
@@ -90,7 +91,7 @@ class LoginForm extends React.Component {
             {/* <div className="qrcode"></div> */}
             <div className="qrcode-container"><img src={window.qrcodeURL} className="qrcode" /></div>
             <div className="h1">Log in with QR Code</div>
-            <div className="h2">Scan this with the {' '}
+            <div className="h2 lightergray">Scan this with the {' '}
               <strong>Discord Mobile app {' '}</strong>
                     to log in instantly.</div>
           </div>

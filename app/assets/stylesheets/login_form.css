@@ -1,15 +1,8 @@
-@media (min-width: 486px) {
-    
-}
-
 .page-container {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-
     width: 100%;
-    height: 100%;
-    font-family: 'Whitney A', 'Whitney B', 'Helvetica Neue', 'Arial', sans-serif;
-
+    height: 100%; */
 }
 
 .login-form-container {
@@ -18,54 +11,45 @@
     margin-top: 10px;
 }
 
-.login-form-box {
 
-}
-
-.login-form {
+.session-form {
     display: flex;
     flex-direction: column;
-
     margin-top: 20px;
-    /* font-weight: 600px;
-    font-size: 12px;
-    text-transform: capitalize;
-    color: #8E9297; */
 }
 
-.label {
+label {
     font-weight: 500;
     font-size: 12px;
     text-transform: uppercase;
-    color: #8E9297;
-
-    /* margin: 0 auto; */
     margin-top: 15px;
     margin-bottom: 7px;
 }
 
-.login-input {
+.session-input {
     padding: 10px;
     border: 1px solid #1f1f1f;
     border-radius: 5px;
     background-color: #2d2f33;
     
+    color: white;
     margin-top: 5px;
     margin-bottom: 5px;
 
 }
 
-.login-submit {
+.session-submit {
     color: white;
     background-color: #7489d6;
 
-    font-size: 15px;
+    font-size: 16px;
     text-transform: capitalize;
 
     padding: 12px;
     border: 1px solid #36393F;
     border-radius: 5px;
     margin-bottom: 8px;
+    margin-top: 15px;
 }
 
 .wandbanner {
@@ -76,37 +60,33 @@
     padding: 17px;
     
     background-color: #36393F;
-    font-size: 17px;
+    font-size: 18px;
     color: white;
-    margin-bottom: 30px;
-    border-radius: 5px;
-    
     
     position: absolute;
     top: 21%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    animation-name: banner;
+    animation-duration: 0.2s;
 }
 
-.wand {
-    font-size: 15px;
-
+@keyframes banner {
+  from {top: 0%}
+  to {top: 21%}
 }
 
-.x {
-
-}
 
 .fyp {
-    font-size: 13px;
+    font-size: 14px;
     color: #7489d6;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .h1 {
-    /* position: absolute; */
     text-align: center;
-    font-size: 23px;
+    font-size: 24px;
     font-weight: 500;
     line-height: 30px;
     color: white;
@@ -115,22 +95,29 @@
 
 .h2 {
     text-align: center;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 20px;
-    color: #B9BBBE;
-
 }
 
 .naa {
     font-size: 14px;
-    color: #72767d;
-
     margin-top: 4px;
 }
 
-.register { 
-    font-size: 14px;
-    color: #7489d6;
+/* .register {
+    animation-name: formbye;
+    animation-duration: 0.2s;
+}
+
+@keyframes formbye {
+  from {top: 53%}
+  to {top: 32%}
+} */
+
+
+.tos {
+    font-size: 12px;
+    margin-top: 20px;
 }
 
 .qr-container {
@@ -138,27 +125,49 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-
-    /* width: 250px; */
 }
 
-.login-qr-container {
+.login-qr-container{
     display: flex;
     flex-direction: row;
     
-    margin: 0 auto;
     width: 720px;
     height: 340px;
     background-color: #36393F;
     padding: 32px;
     border-radius: 5px;
     
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    animation-name: formhi;
+    animation-duration: 0.2s;
+}
+
+.signup-form-container { 
+    margin: 0 auto;
+    width: 416px;
+    height: 410px;
+    background-color: #36393F;
+    padding: 32px;
+    border-radius: 5px;
     
     position: absolute;
     top: 53%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    animation-name: formhi;
+    animation-duration: 0.2s;
 }
+
+@keyframes formhi {
+  from {top: 32%}
+  to {top: 53%}
+}
+
 
 strong {
     font-weight: 500;
@@ -178,27 +187,10 @@ strong {
     margin-bottom: 40px;
 }
 
-/* .loginbg {
-    position: relative;
+.sessionbg {
+    background: url('loginbg.jpg') no-repeat center center fixed; 
+    position: absolute;
     width: 100%;
     height: 100%;
-} */
-
-/* .loginbg {
-    padding: 0;
-    display: block;
-    margin: 0 auto;
-    max-height: 100%;
-    max-width: 100%;
-    background-image: url('loginbg.jpg');
     background-size: cover;
-    border: 2px solid #e9385a;
-} */
-
-html { 
-  background: url('loginbg.jpg') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }

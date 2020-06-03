@@ -7,10 +7,7 @@ import SplashContainer from './splash/splash_container'
 
 const App = () => (
     <div>
-        <header>
-            <h1>dyskord from app</h1>
-        </header>
-
+        <header></header>
 
         <Switch>
             <AuthRoute exact path="/login" component={LoginFormContainer} />
