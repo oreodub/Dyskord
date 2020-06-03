@@ -1,17 +1,19 @@
 import React from "react";
 import {Route, Switch, Link} from 'react-router-dom';
+import { AuthRoute } from '../util/route_util';
+import SignupFormContainer from './session_form/signup_form_container';
+import LoginFormContainer from './session_form/login_form_container';
+import SplashContainer from './splash/splash_container'
 
-import SignUpFormContainer from './session_form/signup_form_container';
-import LogInFormContainer from './session_form/login_form_container';
 const App = () => (
     <div>
-        <header>
-            <h1>dyskord from app</h1>
-        </header>
-        <Link to="/login">Login</Link>
+        <header></header>
 
-        <Route path="/login" component={LogInFormContainer} />
-        <Route path="/signup" component={SignUpFormContainer} />
+        <Switch>
+            <AuthRoute exact path="/login" component={LoginFormContainer} />
+            <AuthRoute exact path="/signup" component={SignupFormContainer} />
+            <Route exact path="/" component={SplashContainer} />
+        </Switch>
         
     </div>
 );

@@ -1,0 +1,196 @@
+.page-container {
+    /* display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%; */
+}
+
+.login-form-container {
+    width: 100%;
+    margin-right: 59px;
+    margin-top: 10px;
+}
+
+
+.session-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 7px;
+}
+
+.session-input {
+    padding: 10px;
+    border: 1px solid #1f1f1f;
+    border-radius: 5px;
+    background-color: #2d2f33;
+    
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+.session-submit {
+    color: white;
+    background-color: #7489d6;
+
+    font-size: 16px;
+    text-transform: capitalize;
+
+    padding: 12px;
+    border: 1px solid #36393F;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+
+.wandbanner {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 630px;
+    padding: 17px;
+    
+    background-color: #36393F;
+    font-size: 18px;
+    color: white;
+    
+    position: absolute;
+    top: 21%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    animation-name: banner;
+    animation-duration: 0.2s;
+}
+
+@keyframes banner {
+  from {top: 0%}
+  to {top: 21%}
+}
+
+
+.fyp {
+    font-size: 14px;
+    color: #7489d6;
+    margin-bottom: 5px;
+}
+
+.h1 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.h2 {
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.naa {
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+/* .register {
+    animation-name: formbye;
+    animation-duration: 0.2s;
+}
+
+@keyframes formbye {
+  from {top: 53%}
+  to {top: 32%}
+} */
+
+
+.tos {
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.qr-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.login-qr-container{
+    display: flex;
+    flex-direction: row;
+    
+    width: 720px;
+    height: 340px;
+    background-color: #36393F;
+    padding: 32px;
+    border-radius: 5px;
+    
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    animation-name: formhi;
+    animation-duration: 0.2s;
+}
+
+.signup-form-container { 
+    margin: 0 auto;
+    width: 416px;
+    height: 410px;
+    background-color: #36393F;
+    padding: 32px;
+    border-radius: 5px;
+    
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    animation-name: formhi;
+    animation-duration: 0.2s;
+}
+
+@keyframes formhi {
+  from {top: 32%}
+  to {top: 53%}
+}
+
+
+strong {
+    font-weight: 500;
+}
+
+.qrcode {
+  /* background-image: url(../images/frame.png); */
+  /* text-align: center; */
+    width: 100%;
+    height: 100%;
+}
+
+.qrcode-container {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.sessionbg {
+    background: url('loginbg.jpg') no-repeat center center fixed; 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
