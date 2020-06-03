@@ -41,7 +41,7 @@ class LoginForm extends React.Component {
 
         <div className="wandbanner">
           <div>IMG</div>
-          <div style={{fontSize: '16px'}}>We are now Discord.com!</div>
+          <div style={{fontSize: '16px'}}>We are now Dyskord.com!</div>
           <div className="x lightergray">x</div>
         </div>
 
