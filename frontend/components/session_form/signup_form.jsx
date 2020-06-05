@@ -3,8 +3,12 @@ import React from 'react';
 class SignupForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { username: '', email: '', password: '' };
+    this.state = { email: '', username: '', password: '' , errors: false};
     this.handleSubmit = this.handleSubmit.bind(this);
+
+    this.emailLabel = 'EMAIL';
+    this.usernameLabel = 'USERNAME';
+    this.passwordLabel = 'PASSWORD';
   }
 
   update(field) {
@@ -15,29 +19,70 @@ class SignupForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.signup(this.state);
+    if (this.valid()) this.props.signup(this.state);
+
   }
 
-  // renderErrors() {
-  //   if (!this.props.errors.length) return;
-  //   return (
-  //     <ul>
-  //       {this.props.errors.map((error, i) => (
-  //         <li key={`error-${i}`}>
-  //           {error}
-  //         </li>
-  //       ))}
-  //     </ul>
-  //   );
-  // }
+  componentDidMount() {
+    this.props.clearErrors();
+  }
 
+
+
+  valid() {
+    let valid = true;
+    let emailLabel = document.getElementsByTagName('label')[0];
+    let emailInput = document.getElementsByTagName('input')[0];
+    let usernameLabel = document.getElementsByTagName('label')[1];
+    let usernameInput = document.getElementsByTagName('input')[1];
+    let passwordLabel = document.getElementsByTagName('label')[2];
+    let passwordInput = document.getElementsByTagName('input')[2];
+
+    if (!this.state.email) {
+      valid = false;
+      emailLabel.className += " label-error"
+      emailInput.className = " input-error"
+      this.emailLabel = <div>EMAIL<div className="inner">- This field is required</div></div>
+
+    } else {
+      this.emailLabel = 'EMAIL'
+    }
+
+    if (!this.state.username) {
+      valid = false;
+      usernameLabel.className += " label-error"
+      usernameInput.className = " input-error"
+      this.usernameLabel = <div>USERNAME<div className="inner">- This field is required</div></div>
+
+    } else {
+      this.usernameLabel = 'USERNAME'
+    }
+
+    if (!this.state.password) {
+      valid = false;
+      passwordLabel.className += " label-error";
+      passwordInput.className = " input-error";
+      this.passwordLabel = <div>PASSWORD<div className="inner">- This field is required</div></div>
+
+    } else {
+      this.passwordLabel = 'PASSWORD'
+    }
+
+    valid ? this.setState({ errors: false }) : this.setState({ errors: true });
+    return valid;
+  }
+
+
+ 
   render() {
-    return (
-      <div className="page-container">
+    
+      return (
+        <div className="page-container">
 
         <div className="sessionbg"></div>
 
-        <div style={{ textAlign: 'center' }}>DYSKORD</div>
+        <a href="#"><img src={window.dyskordURL} className="logo" /></a>
+        
       
         <div className="signup-form-container">
           
@@ -46,31 +91,32 @@ class SignupForm extends React.Component {
           <h1></h1>
           
           <form onSubmit={this.handleSubmit} className="signup-form-box">
-            
-            {/* {this.renderErrors()} */}
 
             <div className="session-form">
 
-              <label className="lightgray">Email</label>
+              <label>{this.emailLabel}</label>
                   <input type="text"
                   onChange={this.update('email')}
                   className="session-input"
+                  value={this.state.email}
                 />
 
-              <label className="lightgray">Username</label>
+              <label className="sul">{this.usernameLabel}</label>
                   <input type="text"
                   onChange={this.update('username')}
                   className="session-input"
+                  value={this.state.username}
                 />
              
-              <label className="lightgray">Password</label>
+              <label className="sul">{this.passwordLabel}</label>
                 <input type="password"
                   onChange={this.update('password')}
                   className="session-input"
+                  value={this.state.password}
                 />
               
                 
-              <input className="session-submit" type="submit" value="Continue" />
+              <input className="cont session-submit" type="submit" value="Continue" />
             </div>
             
           </form>
@@ -78,9 +124,9 @@ class SignupForm extends React.Component {
           {this.props.navLink}
 
           <div className="tos darkgray">By registering, you agree to Dyskord's {' '}
-              <a className="blue" href="">Terms of Service {' '}</a>
+              <a className="blue" href="/#/signup">Terms of Service {' '}</a>
               and {' '}
-              <a className="blue" href="">Privacy Policy</a>
+            <a className="blue" href="/#/signup">Privacy Policy</a>
               .
           </div>
 

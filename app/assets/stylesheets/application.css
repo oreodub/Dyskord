@@ -14,18 +14,37 @@
  *= require_self
  */
 
- 
-h1, h2, h3, h4, label, input, li, ul, div {
-  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+ @font-face {
+  font-family: 'Whitney';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local('Whitney'),
+    /* url(../fonts/whitneymedium.woff) format('woff'), */
+    url(../fonts/whitney-medium.otf) format('opentype')
 }
+
+ /* @font-face {
+  font-family: 'WhitneyBold';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    url(../fonts/whitney-bold.otf) format('opentype')
+} */
+
+
+html, input, button {
+font-family: 'Whitney', Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
 
 .blue {
   color: #7489d6;
 }
 
-.lightgray {
+/* .lightgray {
   color: #8E9297;
-}
+} */
 
 .lightergray {
   color: #B9BBBE;
