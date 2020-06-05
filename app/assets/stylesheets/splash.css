@@ -1,0 +1,46 @@
+
+
+.splash-container {
+    position: fixed;
+    background-color: #26262b;
+    width: 100%;
+    height: 100%;
+    background-size: cover; 
+    color: #fcfcfc;
+}
+
+.splash-nav {
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+li {
+    margin: 0 8px;
+    display: flex;
+    flex-direction: row;
+}
+
+li:hover {
+    color: white;
+}
+
+  
+  

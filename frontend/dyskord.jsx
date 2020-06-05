@@ -10,9 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.logout = logout;
 
     // const store = configureStore();
-    // window.getState = store.getState;
     // window.dispatch = store.dispatch;
-
+    
     let store;
     if (window.currentUser) {
         const preloadedState = {
@@ -25,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         delete window.currentUser;
     } else {
         store = configureStore();
+        window.getState = store.getState;
     }
     
     const root = document.getElementById('root');

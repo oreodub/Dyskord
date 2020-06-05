@@ -3,8 +3,11 @@ import React from 'react';
 class LoginForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {email: '', password: '' };
+    this.state = {email: '', password: '' , errors: false};
     this.handleSubmit = this.handleSubmit.bind(this);
+
+    this.emailLabel = 'EMAIL';
+    this.passwordLabel = 'PASSWORD';
   }
 
   update(field) {
@@ -15,21 +18,43 @@ class LoginForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.login(this.state);
+    if (this.valid()) this.props.login(this.state);
   }
 
-  renderErrors() {
-    if (!this.props.errors.length) return;
-    return (
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
-    );
-  }    
+  componentDidMount() {
+    this.props.clearErrors();
+  }
+
+  valid() {
+    let valid = true; 
+    let emailLabel = document.getElementsByTagName('label')[0];
+    let emailInput = document.getElementsByTagName('input')[0];
+    let passwordLabel = document.getElementsByTagName('label')[1];
+    let passwordInput = document.getElementsByTagName('input')[1];
+
+    if (!this.state.email) {
+      valid = false;
+      emailLabel.className += " label-error"
+      emailInput.className = " input-error"
+      this.emailLabel = <div>EMAIL<div className="inner">- This field is required</div></div>
+      
+    } else {
+      this.emailLabel= 'EMAIL'
+    }
+
+    if (!this.state.password) {
+      valid = false;
+      passwordLabel.className += " label-error";
+      passwordInput.className = " input-error";
+      this.passwordLabel = <div>PASSWORD<div className="inner">- This field is required</div></div>
+      
+    } else {
+      this.passwordLabel= 'PASSWORD'
+    }
+
+    valid ? this.setState({ errors: false }) : this.setState({ errors: true });
+    return valid;
+  }
 
   banner() {
     document.getElementsByClassName("naruto")[0].style.display = "none";
@@ -42,7 +67,7 @@ class LoginForm extends React.Component {
         
         <div className="sessionbg"></div>
 
-        <img src={window.dyskordURL} className="logo"/>
+        <a href="#"><img src={window.dyskordURL} className="logo" /></a>
         
           <div className="wandbanner">
           <img src={window.narutoURL} className="naruto" />
@@ -58,10 +83,9 @@ class LoginForm extends React.Component {
             
             <form onSubmit={this.handleSubmit} className="login-form-box">
 
-              {/* {this.renderErrors()} */}
 
               <div className="session-form">
-                <label className="lightgray">Email</label>
+                <label>{this.emailLabel}</label>
                   <input type="text"
                     value={this.state.email}
                     onChange={this.update('email')}
@@ -69,7 +93,7 @@ class LoginForm extends React.Component {
                   />
 
 
-                <label className="lightgray lgpwlabel">Password</label>
+                <label className=" lgpwlabel">{this.passwordLabel}</label>
                   <input type="password"
                     value={this.state.password}
                     onChange={this.update('password')}
