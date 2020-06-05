@@ -79,7 +79,7 @@ class SignupForm extends React.Component {
       return (
         <div className="page-container">
 
-        <div className="sessionbg"></div>
+        <div><img src={window.loginbgURL} className="bg" /></div>
 
         <a href="#"><img src={window.dyskordURL} className="logo" /></a>
         
