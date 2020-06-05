@@ -267,7 +267,7 @@ strong {
 }
 
 .sessionbg {
-    background: url('loginbg.jpg') no-repeat center center fixed; 
+    background: url('../images/loginbg.jpg') no-repeat center center fixed;
     position: absolute;
     width: 100%;
     height: 100%;
