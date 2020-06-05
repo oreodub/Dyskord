@@ -10,8 +10,8 @@ class Splash extends React.Component {
   render() {
     return (
       <div className="splash_container">
-        <header>
-          <nav>
+        <header> header 
+          <nav> navbar
             <div>
               <img src="" alt=""/>
             </div>
@@ -50,23 +50,23 @@ class Splash extends React.Component {
 } 
 
 
-= ({ currentUser, logout }) => {
-  const sessionLinks = () => (
-    <nav className="login-signup">
-      <Link to="/login">Login</Link>
-      &nbsp;or&nbsp;
-      <Link to="/signup">Sign up!</Link>
-    </nav>
-  );
-  const personalSplash = () => (
-    <hgroup className="header-group">
-      <h2 className="header-name">Hi, {currentUser.username}!</h2>
-      <button className="header-button" onClick={logout}>Log Out</button>
-    </hgroup>
-  );
+// = ({ currentUser, logout }) => {
+//   const sessionLinks = () => (
+//     <nav className="login-signup">
+//       <Link to="/login">Login</Link>
+//       &nbsp;or&nbsp;
+//       <Link to="/signup">Sign up!</Link>
+//     </nav>
+//   );
+//   const personalSplash = () => (
+//     <hgroup className="header-group">
+//       <h2 className="header-name">Hi, {currentUser.username}!</h2>
+//       <button className="header-button" onClick={logout}>Log Out</button>
+//     </hgroup>
+//   );
 
-  return currentUser ? personalSplash() : sessionLinks();
-};
+//   return currentUser ? personalSplash() : sessionLinks();
+// };
 
 
 export default Splash;

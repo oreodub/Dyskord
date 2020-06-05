@@ -3,8 +3,14 @@ import React from 'react';
 class SignupForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { username: '', email: '', password: '' };
+    this.state = { email: '', username: '', password: '' };
     this.handleSubmit = this.handleSubmit.bind(this);
+    // this.errors = {
+    //   emailError: false,
+    //   usernameError: false,
+    //   passwordError: false,
+    //   emailInvalid: false
+    // }
   }
 
   update(field) {
@@ -18,18 +24,13 @@ class SignupForm extends React.Component {
     this.props.signup(this.state);
   }
 
-  // renderErrors() {
-  //   if (!this.props.errors.length) return;
-  //   return (
-  //     <ul>
-  //       {this.props.errors.map((error, i) => (
-  //         <li key={`error-${i}`}>
-  //           {error}
-  //         </li>
-  //       ))}
-  //     </ul>
-  //   );
-  // }
+  componentDidMount() {
+    this.props.clearErrors();
+  }
+
+  renderErrors(email, username, password) {
+    
+  }
 
   render() {
     return (
@@ -37,7 +38,7 @@ class SignupForm extends React.Component {
 
         <div className="sessionbg"></div>
 
-        <div style={{ textAlign: 'center' }}>DYSKORD</div>
+        <img src={window.dyskordURL} className="logo" />
       
         <div className="signup-form-container">
           
@@ -55,22 +56,25 @@ class SignupForm extends React.Component {
                   <input type="text"
                   onChange={this.update('email')}
                   className="session-input"
+                  value={this.state.email}
                 />
 
-              <label className="lightgray">Username</label>
+              <label className="sul lightgray">Username</label>
                   <input type="text"
                   onChange={this.update('username')}
                   className="session-input"
+                  value={this.state.username}
                 />
              
-              <label className="lightgray">Password</label>
+              <label className="sul lightgray">Password</label>
                 <input type="password"
                   onChange={this.update('password')}
                   className="session-input"
+                  value={this.state.password}
                 />
               
                 
-              <input className="session-submit" type="submit" value="Continue" />
+              <input className="cont session-submit" type="submit" value="Continue" />
             </div>
             
           </form>
@@ -78,9 +82,9 @@ class SignupForm extends React.Component {
           {this.props.navLink}
 
           <div className="tos darkgray">By registering, you agree to Dyskord's {' '}
-              <a className="blue" href="">Terms of Service {' '}</a>
+              <a className="blue" href="/#/signup">Terms of Service {' '}</a>
               and {' '}
-              <a className="blue" href="">Privacy Policy</a>
+            <a className="blue" href="/#/signup">Privacy Policy</a>
               .
           </div>
 
