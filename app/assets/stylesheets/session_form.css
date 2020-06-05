@@ -266,7 +266,7 @@ strong {
     margin-bottom: 40px;
 }
 
-.bg {
+.sessionbg {
     background: url('../images/loginbg.jpg') no-repeat center center fixed;
     position: absolute;
     width: 100%;
