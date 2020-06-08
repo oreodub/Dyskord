@@ -94,7 +94,7 @@ class Splash extends React.Component {
              a nightly gaming group, a worldwide art community, or just a handful of friends that want to hang out.
           </div>
           <div className="splash-btns">
-            <Link to="/@me" onClick={this.demo}>
+            <Link className="demo-link" to="/@me" onClick={this.demo}>
               <input type="button" className="left-button" value='Demo'/>
                 
             </Link>
@@ -106,6 +106,8 @@ class Splash extends React.Component {
             </Link>
           </div>
         </div>
+
+        <img src={window.splashbgURL} className="splashbg" />
 
       </div>
     )
