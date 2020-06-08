@@ -16,9 +16,14 @@ class Home extends React.Component {
 
     return (
       <div className="home-container">
-        <div className="friend-container"></div>
+        <div className="friend-container">
+          <div className="searchbar"></div>
+        </div>
         <div className="server-container"></div>
-      
+        <nav className="home-nav">
+          <div>Friends</div>
+          <div>All</div>
+        </nav>
 
       <div className="user-container">
 
@@ -34,9 +39,12 @@ class Home extends React.Component {
         </div>
 
         <ul className="user-buttons">
-            <input type="button" value='m' />
-            <input type="button" value='d' />
-            <input type="button" onClick={this.props.logout} value='lo' />
+            <button> <i className="fas fa-microphone"></i> </button>
+            
+            <button> <i className="fas fa-headset"></i> </button>
+            
+            <button onClick={this.props.logout}> <i className="fas fa-cog"></i> </button>
+           
         </ul>
       </div>
 
