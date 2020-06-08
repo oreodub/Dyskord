@@ -65,7 +65,7 @@ class LoginForm extends React.Component {
     return (
       <div className="page-container">
         
-        <div><img src={window.loginbgURL} className="bg" /></div>
+        <div><img src={window.loginbgURL} className="sessionbg" /></div>
 
         <a href="#"><img src={window.dyskordURL} className="logo" /></a>
         
