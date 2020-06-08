@@ -1,0 +1,61 @@
+.home-container {
+    height: 100%;
+    width: 100%;
+    background: red;
+    position: fixed;
+    left: 72px;
+}
+
+.friend-container {
+    /* display: flex; */
+    position: fixed;
+    width: 240px;
+    height: 100%;
+    left: 72px;
+    background: blue;
+}
+
+.server-container {
+    /* display: flex; */
+    position: fixed;
+    width: 72px;
+    height: 100%;
+    left: 0px;
+    background: maroon;
+}
+
+.user-container {
+    display: flex;
+    position: absolute;
+    width: 220px;
+    height: 32px;
+    
+    padding: 10px;
+    left: 0;
+    bottom: 0;
+
+    background: orange;
+    color: grey;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-pic {
+    position: relative;
+    width: 20px;
+}
+    
+
+.title {
+    flex-direction: column;
+}
+
+
+.user-buttons {
+
+}
