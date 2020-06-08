@@ -90,11 +90,11 @@ class Splash extends React.Component {
         <div className="splash-main">
           <div className="splash-header">A new way to chat with your communities and friends.</div>
           <div className="splash-text">
-            Discord is the easiest way to communicate over voice, video, and text, whether you’re part of a school club,
+            Dyskord is the easiest way to communicate over voice, video, and text, whether you’re part of a school club,
              a nightly gaming group, a worldwide art community, or just a handful of friends that want to hang out.
           </div>
           <div className="splash-btns">
-            <Link to="/@me" onClick={this.demo}>
+            <Link className="demo-link" to="/@me" onClick={this.demo}>
               <input type="button" className="left-button" value='Demo'/>
                 
             </Link>
@@ -106,6 +106,8 @@ class Splash extends React.Component {
             </Link>
           </div>
         </div>
+
+        <img src={window.splashbgURL} className="splashbg" />
 
       </div>
     )
