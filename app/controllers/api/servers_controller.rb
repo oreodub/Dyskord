@@ -4,6 +4,11 @@ class Api::ServersController < ApplicationController
         render :index
     end
 
+    def show
+        @server = Server.find(params[:id])
+        render :show
+    end
+
 
     def create
         @server = Server.new(server_params)
@@ -17,7 +22,7 @@ class Api::ServersController < ApplicationController
     end
 
     def update
-        @server = Server.find_by(params[:id])
+        @server = Server.current_user.owned_servers.find(params[:id])
         if @server.update(server_params)
             render :show
         else

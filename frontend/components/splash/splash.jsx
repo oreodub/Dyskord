@@ -94,16 +94,15 @@ class Splash extends React.Component {
              a nightly gaming group, a worldwide art community, or just a handful of friends that want to hang out.
           </div>
           <div className="splash-btns">
+            
             <Link className="demo-link" to="/servers" onClick={this.demo}>
               <input type="button" className="left-button" value='Demo'/>
-                
             </Link>
-            <Link
-              to={currentUser ? "/servers" : "/login"}
-            >
-              <input type="button" className="right-button" value={currentUser ? "Open" : "Open Dyskord"}/>
-                
+
+            <Link to={currentUser ? "/servers" : "/login"}>
+              <input type="button" className="right-button" value={currentUser ? "Open" : "Open Dyskord"}/>  
             </Link>
+            
           </div>
         </div>
 

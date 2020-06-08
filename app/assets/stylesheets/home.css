@@ -1,9 +1,22 @@
 .home-container {
     height: 100%;
     width: 100%;
-    background: red;
+    background: #36393f;
     position: fixed;
     left: 72px;
+}
+
+.home-nav {
+    /* display: flex; */
+    position: fixed;
+    width: 100%;
+    height: 48px;
+    top: 0;
+    left: 312px;
+    padding: 0 8px;
+
+    border-bottom: 1px solid #2B2C31;
+    
 }
 
 .friend-container {
@@ -12,16 +25,22 @@
     width: 240px;
     height: 100%;
     left: 72px;
-    background: blue;
+    background: #2F3136;
+
 }
 
+.searchbar {
+    width: 100%;
+    height: 48px;
+    border-bottom: 1px solid #232429;
+}
 .server-container {
     /* display: flex; */
     position: fixed;
     width: 72px;
     height: 100%;
     left: 0px;
-    background: maroon;
+    background: #202225;
 }
 
 .user-container {
@@ -34,7 +53,7 @@
     left: 0;
     bottom: 0;
 
-    background: orange;
+    background: #292b2f;
     color: grey;
     flex-direction: row;
     justify-content: space-between;
@@ -54,8 +73,29 @@
 .title {
     flex-direction: column;
 }
+.name {
+    color: white;
 
+}
 
-.user-buttons {
-    width: 100%;
+.user-buttons button{
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* text-align: center; */
+    background: transparent;
+    text-decoration: none;
+    border: none;
+    color: #b9bbbe;
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    outline: none;
+
+    transition: 0.1s;
+}
+
+.user-buttons button:hover {
+    cursor: pointer;
+    background-color: #36393f;
+    border-radius: 3px;
 }
