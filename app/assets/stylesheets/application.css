@@ -14,15 +14,15 @@
  *= require_self
  */
 
- @font-face {
+ /* @font-face {
   font-family: 'Whitney';
   font-style: normal;
   font-weight: normal;
-  src:
-    local('Whitney'),
+  src: */
+    /* local('Whitney'), */
     /* url(../fonts/whitneymedium.woff) format('woff'), */
-    url(../fonts/whitney-medium.otf) format('opentype')
-}
+    /* url(../fonts/whitney-medium.otf) format('opentype') */
+/* } */
 
  /* @font-face {
   font-family: 'WhitneyBold';
