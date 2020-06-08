@@ -26,7 +26,7 @@ class Splash extends React.Component {
         <a className ='login-button' href="/#/login">Login</a>
       );
       const openButton = () => (
-        <a className='open-button' href="/#/@me">Open</a>
+        <a className='open-button' href="/#/servers">Open</a>
       );
 
     
@@ -94,12 +94,12 @@ class Splash extends React.Component {
              a nightly gaming group, a worldwide art community, or just a handful of friends that want to hang out.
           </div>
           <div className="splash-btns">
-            <Link className="demo-link" to="/@me" onClick={this.demo}>
+            <Link className="demo-link" to="/servers" onClick={this.demo}>
               <input type="button" className="left-button" value='Demo'/>
                 
             </Link>
             <Link
-              to={currentUser ? "/@me" : "/login"}
+              to={currentUser ? "/servers" : "/login"}
             >
               <input type="button" className="right-button" value={currentUser ? "Open" : "Open Dyskord"}/>
                 
