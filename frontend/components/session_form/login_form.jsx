@@ -34,8 +34,8 @@ class LoginForm extends React.Component {
 
     if (!this.state.email) {
       valid = false;
-      emailLabel.className += " label-error"
-      emailInput.className = " input-error"
+      emailLabel.className += " label-error";
+      emailInput.className = " input-error";
       this.emailLabel = <div>EMAIL<div className="inner">- This field is required</div></div>
       
     } else {
@@ -78,8 +78,8 @@ class LoginForm extends React.Component {
         <div className="login-qr-container">
           <div className="login-form-container">
             
-            <div className="h1">Welcome back!</div>
-            <div className="h2 lightergray">We're so excited to see you again!</div>
+            <h1 >Welcome back!</h1>
+            <h2 className="lightergray">We're so excited to see you again!</h2>
             
             <form onSubmit={this.handleSubmit} className="login-form-box">
 
@@ -118,10 +118,10 @@ class LoginForm extends React.Component {
           <div className="qr-container">
             <div className="qrcode-container"><img src={window.qrcodeURL} className="qrcode" /></div>
             <div className="qr-text">
-              <div className="h1">Log in with QR Code</div>
-              <div className="h2 lightergray">Scan this with the {' '}
-                <strong>Discord mobile app {' '}</strong>
-                      to log in instantly.</div>
+              <h1>Log in with QR Code</h1>
+              <h2 className="lightergray">Scan this with the {' '}
+                <strong>Dyskord mobile app {' '}</strong>
+                      to log in instantly.</h2>
             </div>
           </div>
 

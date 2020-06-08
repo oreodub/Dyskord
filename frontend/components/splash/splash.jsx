@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 class Splash extends React.Component {
   constructor(props) {
     super(props);
+
+    this.demo = this.demo.bind(this);
   }
 
   banner() {
@@ -12,10 +14,28 @@ class Splash extends React.Component {
     document.getElementsByClassName("wandbanner")[0].style.display = "none";
   }
 
+  demo() {
+    this.props.login({email: 'Demo@demo.com', password: 'demodemo'})
+  }
+
   render() {
+    const {currentUser} = this.props;
+
+    
+      const loginButton = () => (
+        <a className ='login-button' href="/#/login">Login</a>
+      );
+      const openButton = () => (
+        <a className='open-button' href="/#/@me">Open</a>
+      );
+
+    
+
     return (
       <div className="splash-container">
         <header>
+          <a href="#"><img src={window.dyskordURL} className="splash-logo" /></a>
+
           <nav className="splash-nav">
             <div>
               <img src="" alt=""/>
@@ -48,21 +68,44 @@ class Splash extends React.Component {
 
 
             <ul className='nav n'>
-              <li>twit</li>
-              <li>fb</li>
-              <li>ig</li>
+              <li><img src={window.twitterURL} alt="" /></li>
+              <li><img src={window.facebookURL} alt="" /></li>
+              <li><img src={window.instagramURL} alt="" /></li>
+
               
-              <li><a href="/#/login">login</a></li>
-              <li>languages</li>
+              
+              <li>{currentUser ? openButton() : loginButton()}</li>
+              <li><img src={window.languagesURL} alt="" /></li>
             </ul>
 
           </nav>
         </header>
 
-        <div className="wandbanner">
+        <div className="splash-wandbanner">
           <img src={window.narutoURL} className="naruto" />
           <div className="wand">We are now Dyskord.com!</div>
-          <button onClick={this.banner} className="x lightergray">x</button>
+        </div>
+
+
+        <div className="splash-main">
+          <div className="splash-header">A new way to chat with your communities and friends.</div>
+          <div className="splash-text">
+            Disarray is the easiest way to communicate over voice, video, and text,
+            whether you’re divart of a school club, a nightly gaming group, a worldwide
+            art community, or just a handful of friends that want to hang out.
+          </div>
+          <div className="splash-btns">
+            <Link to="/@me" onClick={this.demo}>
+              <input type="button" className="left-button" value='Demo'/>
+                
+            </Link>
+            <Link
+              to={currentUser ? "/@me" : "/login"}
+            >
+              <input type="button" className="right-button" value={currentUser ? "Open" : "Open Dyskord"}/>
+                
+            </Link>
+          </div>
         </div>
 
       </div>
@@ -71,23 +114,7 @@ class Splash extends React.Component {
 } 
 
 
-// = ({ currentUser, logout }) => {
-//   const sessionLinks = () => (
-//     <nav className="login-signup">
-//       <Link to="/login">Login</Link>
-//       &nbsp;or&nbsp;
-//       <Link to="/signup">Sign up!</Link>
-//     </nav>
-//   );
-//   const personalSplash = () => (
-//     <hgroup className="header-group">
-//       <h2 className="header-name">Hi, {currentUser.username}!</h2>
-//       <button className="header-button" onClick={logout}>Log Out</button>
-//     </hgroup>
-//   );
 
-//   return currentUser ? personalSplash() : sessionLinks();
-// };
 
 
 export default Splash;

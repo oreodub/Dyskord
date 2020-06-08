@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { logout } from '../../actions/session_actions';
+import { login } from '../../actions/session_actions';
 import Splash from './splash';
 
 const mapStateToProps = ({ session, entities: { users } }) => {
@@ -10,7 +10,7 @@ const mapStateToProps = ({ session, entities: { users } }) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch(logout())
+  login: (user) => dispatch(login(user))
 });
 
 export default connect(
