@@ -20,6 +20,7 @@ class LoginForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.props.clearErrors();
     if (this.valid()) this.props.login(this.state);
   }
 
@@ -41,24 +42,26 @@ class LoginForm extends React.Component {
     if (!this.state.email) {
       valid = false;
       emailLabel.className += " label-error";
-      emailInput.className = " input-error";
+      emailInput.className = "input-error";
       this.emailLabel = <div>EMAIL<div className="inner">- This field is required</div></div>
       
     } else {
-      this.emailLabel= 'EMAIL'
+      this.emailLabel= 'EMAIL';
+      emailLabel.className = "";
+      emailInput.className = "session-input";
     }
 
     if (!this.state.password) {
       valid = false;
       passwordLabel.className += " label-error";
-      passwordInput.className = " input-error";
+      passwordInput.className = "input-error";
       this.passwordLabel = <div>PASSWORD<div className="inner">- This field is required</div></div>
       
     } else {
-      this.passwordLabel= 'PASSWORD'
+      this.passwordLabel= 'PASSWORD';
+      passwordLabel.className = "lgpwlabel";
+      passwordInput.className = "session-input";
     }
-
-    valid ? this.setState({ errors: false }) : this.setState({ errors: true });
     return valid;
   }
 
@@ -67,18 +70,33 @@ class LoginForm extends React.Component {
     document.getElementsByClassName("wandbanner")[0].style.display = "none";
   }
 
-  
 
   render() {
-    debugger;
-    if (this.props.errors.length > 0) {
-      this.emailLabel = <div>EMAIL<div className="inner">- {this.props.errors[0]}</div></div>
-    }
+    let emailLabel = document.getElementsByTagName('label')[0];
+    let emailInput = document.getElementsByTagName('input')[0];
+    let passwordLabel = document.getElementsByTagName('label')[1];
+    let passwordInput = document.getElementsByTagName('input')[1];
 
-    // if (this.props.errors['Password']) {
-    //   debugger;
-    // this.passwordLabel = <div>PASSWORD<div className="inner">- {this.props.errors['Password']}</div></div>
-    // }
+    this.props.errors.map((err) => {
+      if (err.includes('Email')) {
+        this.emailLabel = <div>EMAIL<div className="inner">- {err}</div></div>
+        emailLabel.className += " label-error";
+        emailInput.className = "input-error";
+      } else {
+        emailLabel.className = "";
+        emailInput.className = "session-input";
+      }
+  
+      if (err.includes('Password')) {
+        this.passwordLabel = <div>PASSWORD<div className="inner">- {err}</div></div>
+        passwordLabel.className += " label-error";
+        passwordInput.className = " input-error";
+      } else {
+        passwordLabel.className = "lgpwlabel";
+        passwordInput.className = "session-input";
+      }
+    })
+
     return (
       <div className="page-container">
         
@@ -110,7 +128,7 @@ class LoginForm extends React.Component {
                   />
 
 
-                <label className=" lgpwlabel">{this.passwordLabel}</label>
+                <label className="lgpwlabel">{this.passwordLabel}</label>
                   <input type="password"
                     value={this.state.password}
                     onChange={this.update('password')}

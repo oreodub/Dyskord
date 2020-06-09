@@ -19,6 +19,7 @@ class SignupForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.props.clearErrors();
     if (this.valid()) this.props.signup(this.state);
 
   }
@@ -40,41 +41,81 @@ class SignupForm extends React.Component {
 
     if (!this.state.email) {
       valid = false;
-      emailLabel.className += " label-error"
-      emailInput.className = " input-error"
+      emailLabel.className += " label-error";
+      emailInput.className = "input-error";
       this.emailLabel = <div>EMAIL<div className="inner">- This field is required</div></div>
 
     } else {
-      this.emailLabel = 'EMAIL'
+      this.emailLabel = 'EMAIL';
+      emailLabel.className = "";
+      emailInput.className = "session-input";
     }
 
     if (!this.state.username) {
       valid = false;
-      usernameLabel.className += " label-error"
-      usernameInput.className = " input-error"
+      usernameLabel.className += " label-error";
+      usernameInput.className = "input-error";
       this.usernameLabel = <div>USERNAME<div className="inner">- This field is required</div></div>
 
     } else {
-      this.usernameLabel = 'USERNAME'
+      this.usernameLabel = 'USERNAME';
+      usernameLabel.className = "sul";
+      usernameInput.className = "session-input";
     }
 
     if (!this.state.password) {
       valid = false;
       passwordLabel.className += " label-error";
-      passwordInput.className = " input-error";
+      passwordInput.className =  "input-error";
       this.passwordLabel = <div>PASSWORD<div className="inner">- This field is required</div></div>
 
     } else {
-      this.passwordLabel = 'PASSWORD'
+      this.passwordLabel = 'PASSWORD';
+      passwordLabel.className = "sul";
+      passwordInput.className = "session-input";
     }
 
-    valid ? this.setState({ errors: false }) : this.setState({ errors: true });
     return valid;
   }
 
 
  
   render() {
+    let emailLabel = document.getElementsByTagName('label')[0];
+    let emailInput = document.getElementsByTagName('input')[0];
+    let usernameLabel = document.getElementsByTagName('label')[1];
+    let usernameInput = document.getElementsByTagName('input')[1];
+    let passwordLabel = document.getElementsByTagName('label')[2];
+    let passwordInput = document.getElementsByTagName('input')[2];
+
+    this.props.errors.map((err) => {
+      if (err.includes('Email')) {
+        this.emailLabel = <div>EMAIL<div className="inner">- {err}</div></div>
+        emailLabel.className += " label-error";
+        emailInput.className = "input-error";
+      } else {
+        emailLabel.className = "";
+        emailInput.className = "session-input";
+      }
+
+      if (err.includes('Username')) {
+        this.usernameLabel = <div>USERNAME<div className="inner">- {err}</div></div>
+        usernameLabel.className += " label-error";
+        usernameInput.className = "input-error";
+      } else {
+        usernameLabel.className = "sul";
+        usernameInput.className = "session-input";
+      }
+
+      if (err.includes('Password')) {
+        this.passwordLabel = <div>PASSWORD<div className="inner">- {err}</div></div>
+        passwordLabel.className += " label-error";
+        passwordInput.className = "input-error";
+      } else {
+        passwordLabel.className = "sul";
+        passwordInput.className = "session-input";
+      }
+    })
     
       return (
         <div className="page-container">

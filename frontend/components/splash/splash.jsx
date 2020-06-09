@@ -90,6 +90,16 @@ class Splash extends React.Component {
 
         <img src={window.splashbgURL} className="splashbg" />
 
+        <footer>
+          <div>
+            <div className="footer-header">Ready to try Dyskord? It's free!</div>
+            <div className="footer-subheader">JOIN OVER 1 PLAYER TODAY</div>
+          </div>
+          <Link to="/register">
+            <input type="button" value="Sign Up Now"/>
+          </Link>
+        </footer>
+
       </div>
     )
   }

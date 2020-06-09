@@ -250,10 +250,15 @@ strong {
     position: relative;
     width: 162px;
     height: 162px;
-    border: 7px solid white;
+    border: 7px solid #d4d4d4;
     border-radius: 4px;
     top: 7px;
     left: 7px;
+    cursor: pointer;
+}
+
+.qrcode:hover {
+    border: 7px solid white;
 }
 
 .qr-text {
