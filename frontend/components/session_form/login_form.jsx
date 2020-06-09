@@ -3,8 +3,10 @@ import React from 'react';
 class LoginForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {email: '', password: '' , errors: false};
+    this.state = {email: '', password: ''};
+
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demo = this.demo.bind(this);
 
     this.emailLabel = 'EMAIL';
     this.passwordLabel = 'PASSWORD';
@@ -19,6 +21,10 @@ class LoginForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     if (this.valid()) this.props.login(this.state);
+  }
+
+  demo() {
+    this.props.login({ email: 'Demo@demo.com', password: 'demodemo' })
   }
 
   componentDidMount() {
@@ -61,7 +67,18 @@ class LoginForm extends React.Component {
     document.getElementsByClassName("wandbanner")[0].style.display = "none";
   }
 
+  
+
   render() {
+    debugger;
+    if (this.props.errors.length > 0) {
+      this.emailLabel = <div>EMAIL<div className="inner">- {this.props.errors[0]}</div></div>
+    }
+
+    // if (this.props.errors['Password']) {
+    //   debugger;
+    // this.passwordLabel = <div>PASSWORD<div className="inner">- {this.props.errors['Password']}</div></div>
+    // }
     return (
       <div className="page-container">
         
@@ -86,7 +103,7 @@ class LoginForm extends React.Component {
 
               <div className="session-form">
                 <label>{this.emailLabel}</label>
-                  <input type="text"
+                  <input type="email"
                     value={this.state.email}
                     onChange={this.update('email')}
                     className="session-input"
@@ -99,9 +116,9 @@ class LoginForm extends React.Component {
                     onChange={this.update('password')}
                     className="session-input"
                   />
-
-                  <a href="#" className="fyp">Forgot your password?</a>
-                  {/* <div className="fyp">Forgot your password?</div> */}
+                
+                <a href="#" className="fyp">{/* Forgot your password? */}</a>
+                  
                     
                   <input className="session-submit" type="submit" value="Login" />
 
@@ -116,12 +133,13 @@ class LoginForm extends React.Component {
           </div>
 
           <div className="qr-container">
-            <div className="qrcode-container"><img src={window.qrcodeURL} className="qrcode" /></div>
+            {/* <img src={window.qrcodeURL} className="qrcode" /> */}
+            <div className="qrcode-container"> <input type="button" className="qrcode" value="DEMO" onClick={this.demo}/></div>
             <div className="qr-text">
-              <h1>Log in with QR Code</h1>
-              <h2 className="lightergray">Scan this with the {' '}
-                <strong>Dyskord mobile app {' '}</strong>
-                      to log in instantly.</h2>
+              <h1>Log in with Demo {/*QR Code*/}</h1>
+              <h2 className="lightergray">Demo account to {' '}
+                <strong>check Dyskord functionality. </strong>
+                </h2>
             </div>
           </div>
 

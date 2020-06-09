@@ -3,7 +3,7 @@ import React from 'react';
 class SignupForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { email: '', username: '', password: '' , errors: false};
+    this.state = { email: '', username: '', password: ''};
     this.handleSubmit = this.handleSubmit.bind(this);
 
     this.emailLabel = 'EMAIL';
@@ -93,7 +93,7 @@ class SignupForm extends React.Component {
             <div className="session-form">
 
               <label>{this.emailLabel}</label>
-                  <input type="text"
+                  <input type="email"
                   onChange={this.update('email')}
                   className="session-input"
                   value={this.state.email}

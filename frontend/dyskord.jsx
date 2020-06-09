@@ -7,7 +7,7 @@ import Root from './components/root'
 document.addEventListener("DOMContentLoaded", () => {
     // window.signUp = signUp;
     // window.login = login;
-    window.logout = logout;
+    // window.logout = logout;
 
     // const store = configureStore();
     // window.dispatch = store.dispatch;

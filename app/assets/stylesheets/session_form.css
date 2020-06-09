@@ -42,7 +42,7 @@ label {
     border-radius: 3px;
     background-color: rgba(0, 0, 0, 0.1);
     /* background-color: #2C2F33; */
-    
+    padding-left: 10px;
     /* #2d2f33 */
     font-size: 16px;
     color: white;
@@ -58,12 +58,12 @@ label {
     border: 1px solid black;
 } 
 
-.session-input[type=text], .session-input[type=password]{
+.session-input[type=text], .session-input[type=email], .session-input[type=password]{
     transition: 0.5s;
     outline: none;
 }
 
-.session-input[type=text]:focus, .session-input[type=password]:focus {
+.session-input[type=text]:focus, .session-input[type=email]:focus, .session-input[type=password]:focus {
     border: 1px solid #7289da;
 }
 
@@ -147,10 +147,13 @@ input[type=submit] {
 
 
 .fyp {
+    /* display: none; */
     font-size: 14px;
     color: #7489d6;
-    margin-bottom: 5px;
-    margin-top: 2px;
+    /* margin-bottom: 5px;
+    margin-top: 2px; */
+    margin-top: 20px;
+    
 }
 
 h1 {

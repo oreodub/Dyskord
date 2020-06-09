@@ -42,28 +42,10 @@ class Splash extends React.Component {
             </div>
 
             <ul className="nav">
-              <li>Download</li>
-              <li>Why Discord?</li>
-              <li>Nitro</li>
-              <li>Jobs</li>
-
-              <li>Developers
-                <ul>
-
-                </ul>
-              </li>
-
-              <li>Community
-                <ul>
-
-                </ul>
-              </li>
-
-              <li>Support
-                <ul>
-
-                </ul>
-              </li>   
+              <li>Linkedin</li>
+              <li>github</li>
+              <li></li>
+              <li>Jobs</li> 
             </ul>
 
 
@@ -102,7 +84,7 @@ class Splash extends React.Component {
             <Link to={currentUser ? "/servers" : "/login"}>
               <input type="button" className="right-button" value={currentUser ? "Open" : "Open Dyskord"}/>  
             </Link>
-            
+
           </div>
         </div>
 
