@@ -34,30 +34,21 @@ class Splash extends React.Component {
     return (
       <div className="splash-container">
         <header>
-          <a href="#"><img src={window.dyskordURL} className="splash-logo" /></a>
-
+          
           <nav className="splash-nav">
-            <div>
-              <img src="" alt=""/>
-            </div>
-
-            <ul className="nav">
-              <li>Linkedin</li>
-              <li>github</li>
-              <li></li>
-              <li>Jobs</li> 
-            </ul>
-
-
-            <ul className='nav n'>
-              <li><img src={window.twitterURL} alt="" /></li>
-              <li><img src={window.facebookURL} alt="" /></li>
-              <li><img src={window.instagramURL} alt="" /></li>
-
+            <a href="#"><img src={window.dyskordURL} className="splash-logo" /></a>
+            <ul>
+              <li>
+                <a href="https://www.linkedin.com/in/williamjsuh/"><i class="fab fa-linkedin"></i></a>
+              </li>
               
-              
-              <li>{currentUser ? openButton() : loginButton()}</li>
-              <li><img src={window.languagesURL} alt="" /></li>
+              <li>
+              <a href="https://github.com/oreodub"><i class="fab fa-github"></i></a>
+              </li>
+
+              <li>
+                {currentUser ? openButton() : loginButton()}
+              </li>
             </ul>
 
           </nav>
