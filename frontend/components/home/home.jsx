@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import ServerIndexContainer from '../server/server_index_container'
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
-
   }
 
-
+  componentDidMount() {
+    // this.props.getServers();
+  }
 
   render() {
     const {currentUser} = this.props;
@@ -19,7 +20,7 @@ class Home extends React.Component {
         <div className="friend-container">
           <div className="searchbar"></div>
         </div>
-        <div className="server-container"></div>
+        <ServerIndexContainer/>
         <nav className="home-nav">
           <div>Friends</div>
           <div>All</div>

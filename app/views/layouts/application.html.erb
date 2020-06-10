@@ -8,9 +8,8 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
 
-
+    <%= favicon_link_tag asset_path('dragon.png') %>
     
-
     <script src="https://kit.fontawesome.com/cdaea745f2.js" crossorigin="anonymous">
     </script>
 
@@ -31,19 +30,7 @@
     </script>
 
     <script type="text/javascript">
-    window.facebookURL = "<%= image_url('facebook.svg') %>";
-    </script>
-
-    <script type="text/javascript">
-    window.twitterURL = "<%= image_url('twitter.svg') %>";
-    </script>
-
-    <script type="text/javascript">
-    window.instagramURL = "<%= image_url('instagram.svg') %>";
-    </script>
-
-    <script type="text/javascript">
-    window.languagesURL = "<%= image_url('languages.svg') %>";
+    window.dragonURL = "<%= image_url('dragon.png') %>";
     </script>
 
     <script type="text/javascript">

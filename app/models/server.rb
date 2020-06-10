@@ -10,7 +10,7 @@
 #  updated_at :datetime         not null
 #
 class Server < ApplicationRecord
-    validates :name, :admin_id, presence: true
+    validates :name, :owner_id, presence: true
     validates :name, uniqueness: true
     validates :private, inclusion: { in: [true, false] }
 

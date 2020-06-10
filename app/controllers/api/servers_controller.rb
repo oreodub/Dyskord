@@ -1,6 +1,6 @@
 class Api::ServersController < ApplicationController
     def index
-        @servers = User.find(current_user.id).servers
+        @servers = Server.all
         render :index
     end
 

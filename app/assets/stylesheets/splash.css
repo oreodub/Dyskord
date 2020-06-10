@@ -42,13 +42,21 @@
 }
 
   
-.splash-logo {
+.splash-logo-dysk {
+    /* display: left; */
     position: relative;
     /* z-index: 100; */
     width: 97px;
     height: 17px;
     /* top: 25px; */
     /* left: 70px; */
+}
+
+.splash-logo-drag {
+    position: absolute;
+    width: 55px;
+    top: 1px;
+    left: 33px;
 }
 
 

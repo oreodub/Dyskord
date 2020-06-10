@@ -1,0 +1,76 @@
+.server-index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.server {
+    width: 48px;
+    height: 48px;
+    margin: 5px 0;
+}
+
+.server button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #36393f;
+    transition: 0.5s;
+    outline: none;
+    border: none;
+}
+
+.server button:hover{
+    border-radius: 15px;
+    background-color: #7489d6;
+}
+
+.server-name {
+    display: block;
+    position: relative;
+    width: 80px;
+    left: 52px;
+    bottom: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    z-index: 1;
+    font-size: 12px;
+}
+
+.server-name-hide {
+    display: none;
+}
+
+.server button a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.home-drag {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    right: 5px;
+}
+
+.home-divider {
+    width: 27px;
+    margin: 0 auto;
+    padding-bottom: 3px;
+    margin-bottom: 3px;
+    border-bottom: 1.5px solid #2d2f32;
+}
+
+.home {
+    margin-top: 12px;
+}
+
+.create {
+    font-size: 28px;
+    font-weight: 900;
+    color: #49b483;
+    cursor: pointer;
+}

@@ -303,10 +303,10 @@ strong {
 }
 
 
-@keyframes logo {
+/* @keyframes logo {
   from {top: -100px}
   to {top: 32px}
-}
+} */
 
 .x {
     position: relative;
@@ -321,10 +321,17 @@ strong {
     margin-top: 15px;
 }
 
-.logo {
-    position: relative;
-    width: 100px;
-    height: 17px;
-    top: 33px;
-    left: 55px;
+.logo-dysk {
+    position: absolute;
+    width: 90px;
+    height: 16px;
+    top: 31px;
+    left: 63px;
+}
+
+.logo-drag {
+    position: absolute;
+    width: 55px;
+    top: 7px;
+    left: 25px;
 }

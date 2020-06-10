@@ -24,7 +24,8 @@ class LoginForm extends React.Component {
     if (this.valid()) this.props.login(this.state);
   }
 
-  demo() {
+  demo(e) {
+    e.preventDefault();
     this.props.login({ email: 'Demo@demo.com', password: 'demodemo' })
   }
 
@@ -102,8 +103,9 @@ class LoginForm extends React.Component {
         
         <div><img src={window.loginbgURL} className="sessionbg" /></div>
 
-        <a href="#"><img src={window.dyskordURL} className="logo" /></a>
-        
+        <a href="#"><img src={window.dyskordURL} className="logo-dysk" /></a>
+        <a href="#"><img src={window.dragonURL} className="logo-drag" /></a>
+
           <div className="wandbanner">
           <img src={window.narutoURL} className="naruto" />
           <div className="wand">We are now Dyskord.com!</div>

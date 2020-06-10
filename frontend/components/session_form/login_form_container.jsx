@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import { login, clearErrors } from '../../actions/session_actions';
 import LoginForm from './login_form';
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = ({errors}) => ({
 
-  errors: state.errors.session,
+  errors: errors.session,
   navLink: <div className="naa darkgray">Need an account? {' '}
               <Link to="/signup" style={{fontSize: '14px'}}className="register blue">Register</Link>
             </div>

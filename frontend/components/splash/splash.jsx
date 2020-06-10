@@ -36,14 +36,15 @@ class Splash extends React.Component {
         <header>
           
           <nav className="splash-nav">
-            <a href="#"><img src={window.dyskordURL} className="splash-logo" /></a>
+            <a href="#"><img src={window.dyskordURL} className="splash-logo-dysk" /></a>
+            <a href="#"><img src={window.dragonURL} className="splash-logo-drag" /></a>
             <ul>
               <li>
-                <a href="https://www.linkedin.com/in/williamjsuh/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/williamjsuh/"><i className="fab fa-linkedin"></i></a>
               </li>
               
               <li>
-              <a href="https://github.com/oreodub"><i class="fab fa-github"></i></a>
+              <a href="https://github.com/oreodub"><i className="fab fa-github"></i></a>
               </li>
 
               <li>

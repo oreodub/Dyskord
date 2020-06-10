@@ -1,30 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { signUp, login, logout } from './util/session_api_util';
+import {getServers} from './util/server_api_util'
 import configureStore from './store/store.js';
 import Root from './components/root'
 
+window.getServers = getServers;
 document.addEventListener("DOMContentLoaded", () => {
-    // window.signUp = signUp;
-    // window.login = login;
-    // window.logout = logout;
-
-    // const store = configureStore();
-    // window.dispatch = store.dispatch;
-    
     let store;
     if (window.currentUser) {
+        const { servers } = window.currentUser;
         const preloadedState = {
             entities: {
-                users: { [window.currentUser.id]: window.currentUser }
+                users: { [window.currentUser.id]: window.currentUser },
+                servers,
             },
             session: { id: window.currentUser.id }
         };
         store = configureStore(preloadedState);
         delete window.currentUser;
+        window.store = store;
+
     } else {
         store = configureStore();
-        window.getState = store.getState;
+        window.store = store;
     }
     
     const root = document.getElementById('root');

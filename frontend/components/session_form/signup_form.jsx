@@ -122,7 +122,8 @@ class SignupForm extends React.Component {
 
         <div><img src={window.loginbgURL} className="sessionbg" /></div>
 
-        <a href="#"><img src={window.dyskordURL} className="logo" /></a>
+          <a href="#"><img src={window.dyskordURL} className="logo-dysk" /></a>
+          <a href="#"><img src={window.dragonURL} className="logo-drag" /></a>
         
       
         <div className="signup-form-container">
