@@ -20,7 +20,7 @@ class ServerIndex extends React.Component {
 
     handleMouseOver(e) {
         e.preventDefault();
-        // console.log(e.currentTarget)
+
         // e.currentTarget.className = 'server-name';
         document.getElementById('create').className = 'server-name';
     }
@@ -33,7 +33,6 @@ class ServerIndex extends React.Component {
 
     render() {
         const { servers } = this.props;
-        console.log(servers)
         let initials = '';
 
             const serverList = servers.map(server => (
@@ -71,10 +70,10 @@ class ServerIndex extends React.Component {
                         <button 
                         onMouseOver={this.handleMouseOver} 
                         onMouseOut={this.handleMouseOut} 
+                        onClick={this.props.openModal}
                         className="create">+
                         <div id='create' className='server-name-hide'>Add Server</div>
                         </button>
-                        {/* <input type="button" onClick={this.props.openModal} value="+"/> */}
                         
                         
                     </li>

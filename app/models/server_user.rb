@@ -9,7 +9,7 @@
 #  updated_at :datetime         not null
 #
 class ServerUser < ApplicationRecord
-    validates :server_id, :userr_id, presence: true
+    validates :server_id, :user_id, presence: true
 
     belongs_to :user
     

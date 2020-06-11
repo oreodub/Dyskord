@@ -105,7 +105,7 @@ label {
 }
 
 .session-submit:hover {
-    background-color: #677bc4;;
+    background-color: #677bc4;
 }
 
 input[type=submit] {
@@ -241,7 +241,7 @@ h2 {
 
 
 strong {
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .qrcode {

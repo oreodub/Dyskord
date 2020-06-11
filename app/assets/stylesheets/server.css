@@ -74,3 +74,239 @@
     color: #49b483;
     cursor: pointer;
 }
+
+
+.add-server-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    width: 476px;
+    height: 326px;
+    padding: 24px 32px 0px;
+    border-radius: 5px;
+}
+
+.create-join-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.add-server-header {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    text-transform: none;
+    padding: 0;
+    margin-top: 6px;
+    margin-bottom: 24px;
+}
+
+.create-join-caption {
+    color: #2e3338;
+    line-height: 20px;
+}
+
+.create-join {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+    width: 194px;
+    height: 208px;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 3px;
+    padding: 16px;
+    margin: 0 10px;
+
+    cursor: pointer;
+
+    transition: box-shadow 0.3s ease-in-out;
+}
+.create-join:hover{
+    box-shadow: 0px 15px 20px 5px rgba(0,0,0,0.15);
+}
+
+
+.create-join-img{
+    width: 194px;
+    height: 78px;
+    margin: 26px 0;
+}
+
+.create-button {
+    background-color: #7289DA;
+}
+
+.join-button {
+    background-color: #43B581;
+}
+
+.create-button, .join-button{
+    font-size: 14px;
+    width: 194px;
+    height: 38px;
+    border-radius: 3px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.create-button:hover, .create-button-confirm:hover {
+    background-color: #677bc4;
+}
+
+.join-button:hover {
+    background-color: #46a379;
+}
+
+
+.create-server {
+    width: 540px;
+    height: 420px;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.create-server form{
+    margin-top: 20px;
+    display: flex;
+}
+
+.create-server-header {
+    font-size: 18px;
+    color: #7289DA;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.create-server-caption {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0;
+    padding: 10px 0;
+    color: #747f8d;
+}
+
+.create-server-title{
+    font-size: 11px;
+    font-weight: 700;
+
+    color: #4f5660;
+    text-align: left;
+}
+
+.create-server input {
+    margin-top: 12px;
+    padding: 10px 4px;
+    border: none;
+    border-bottom: 1.5px solid #e3e5e8;
+    color: #060607;
+    font-size: 16px;
+    outline: none;
+    /* padding: 10px;
+    margin: 20px;
+    width:  80%;
+    border: 0px;
+    border-bottom: 1px grey solid; */
+}
+  
+.create-server input:focus {
+    
+}
+
+.create-server-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 452px;
+    height: 318px;
+    padding: 28px 40px 0;
+}
+
+.create-server-left {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-right: 75px;
+    flex: 1.2 1 0px;
+}
+
+.cg {
+    font-size: 11px;
+    color: #747F4D;
+    margin: 15px 0;
+    text-align: left;
+}
+
+.create-server-img {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background: #738bd8;
+    border: 5px solid #e3e5e8;
+    /* box-sizing: content-box; */
+    display: flex;
+    align-items: center;
+}
+
+.create-server-img div {
+    font-size: 40px;
+    color: white;
+    margin: 0 auto;
+}
+
+.create-min {
+    font-size: 10px;
+    text-align: center;
+    color: #87909C;
+    margin-top: 10px;
+}
+
+.create-server-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-server-button {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    height: 20%;
+    background-color: #f6f6f7;
+    overflow: hidden;
+}
+  
+.create-button-confirm {
+    position: relative;
+    top: 71px;
+    left: 65px;
+    background-color: #738bd8;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+    width: 96px;
+    height: 38px;
+    padding: 2px 16px;
+    border-radius: 3px;
+}
+
+  .errors-ul{
+    margin: 0px;
+    padding: 0px;
+  }
+  .errors-li{
+    color: red;
+    margin: 0px;
+    padding: 5px 0px;
+  }
