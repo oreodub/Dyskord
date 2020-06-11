@@ -25,6 +25,6 @@ class Server < ApplicationRecord
 
     has_many :users,
     through: :server_users,
-    source: :users
+    source: :user
 
 end

@@ -57,3 +57,16 @@ export const deleteServer = (serverId) => dispatch => (
         (error) => dispatch(receiveErrors(error.responseJSON))
     )
 );
+
+export const joinServer = (server) => dispatch => (
+    api_util.joinServer(server).then(
+        (server) => dispatch(receiveServer(server)),
+        (error) => dispatch(receiveErrors(error))
+    )
+);
+export const leaveServer = (serverId, userId) => dispatch => (
+    api_util.leaveServer(serverId, userId).then(
+        (serverId2) => dispatch(removeServer(serverId2)),
+        (error) => dispatch(receiveErrors(error))
+    )
+);

@@ -22,8 +22,8 @@ class Home extends React.Component {
         </div>
         <ServerIndexContainer/>
         <nav className="home-nav">
-          <div>Friends</div>
-          <div>All</div>
+          <div></div>
+          <div></div>
         </nav>
 
       <div className="user-container">
