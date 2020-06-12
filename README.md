@@ -22,6 +22,11 @@ Dyskord, a clone of Discord, allows users to live chat amongst one another throu
 ## Features
 
 ### Servers and Channels
+A demo login is provided to see functionality of the site
+
+![Animated GIF-downsized](https://user-images.githubusercontent.com/57922498/84518470-bf267400-ac9e-11ea-9142-6476d6125832.gif)
+
+
 Users can create their own servers or join a pre-existing one with an invite code. 
 
 ![Animated GIF-downsized](https://user-images.githubusercontent.com/57922498/84512804-84b8d900-ac96-11ea-8d4e-ea451f2aaf58.gif)
