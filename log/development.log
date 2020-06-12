@@ -28012,3 +28012,337 @@ Processing by Api::ServersController#index as JSON
 Completed 200 OK in 37ms (Views: 34.0ms | ActiveRecord: 2.5ms)
 
 
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mServerUser Load (0.5ms)[0m  [1m[34mSELECT "server_users".* FROM "server_users" WHERE "server_users"."user_id" = $1[0m  [["user_id", 26]]
+  ↳ db/seeds.rb:9
+  [1m[36mServerUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "server_users" WHERE "server_users"."id" = $1[0m  [["id", 24]]
+  ↳ db/seeds.rb:9
+  [1m[36mServerUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "server_users" WHERE "server_users"."id" = $1[0m  [["id", 28]]
+  ↳ db/seeds.rb:9
+  [1m[36mServerUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "server_users" WHERE "server_users"."id" = $1[0m  [["id", 31]]
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 26]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mServerUser Load (0.2ms)[0m  [1m[34mSELECT "server_users".* FROM "server_users" WHERE "server_users"."user_id" = $1[0m  [["user_id", 27]]
+  ↳ db/seeds.rb:9
+  [1m[36mServerUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "server_users" WHERE "server_users"."id" = $1[0m  [["id", 25]]
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 27]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mServerUser Load (0.2ms)[0m  [1m[34mSELECT "server_users".* FROM "server_users" WHERE "server_users"."user_id" = $1[0m  [["user_id", 28]]
+  ↳ db/seeds.rb:9
+  [1m[36mServerUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "server_users" WHERE "server_users"."id" = $1[0m  [["id", 26]]
+  ↳ db/seeds.rb:9
+  [1m[36mServerUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "server_users" WHERE "server_users"."id" = $1[0m  [["id", 29]]
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 28]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mServerUser Load (0.5ms)[0m  [1m[34mSELECT "server_users".* FROM "server_users" WHERE "server_users"."user_id" = $1[0m  [["user_id", 25]]
+  ↳ db/seeds.rb:9
+  [1m[36mServerUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "server_users" WHERE "server_users"."id" = $1[0m  [["id", 23]]
+  ↳ db/seeds.rb:9
+  [1m[36mServerUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "server_users" WHERE "server_users"."id" = $1[0m  [["id", 27]]
+  ↳ db/seeds.rb:9
+  [1m[36mServerUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "server_users" WHERE "server_users"."id" = $1[0m  [["id", 30]]
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 25]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "DemoAcount"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Demo@demo.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "DemoAcount"], ["email", "Demo@demo.com"], ["password_digest", "$2a$12$/kw1Ma64KL2mslODsnBEi.vzV.wPY1RvgI6zAdkcAZfi577dxDqR."], ["session_token", "3F7dHFMEEcWAQMwXoPdaIA"], ["created_at", "2020-06-12 09:26:16.863280"], ["updated_at", "2020-06-12 09:26:16.863280"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Dobberman"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Dobberman@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Dobberman"], ["email", "Dobberman@gmail.com"], ["password_digest", "$2a$12$aScpc5JaBeSxuYadtWk7CuGQMm.dFQiWXuLiC.HduJNs/qo6vLU6m"], ["session_token", "W6fpIfZhaOA5Whwwaj0jQw"], ["created_at", "2020-06-12 09:26:17.129299"], ["updated_at", "2020-06-12 09:26:17.129299"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Alex Lee"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "AlexLee@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Alex Lee"], ["email", "AlexLee@gmail.com"], ["password_digest", "$2a$12$UgTSJ0dDG7gVGYSaCj6Yo.MHQpo1M8WDRzg0UxLR8m3zUI6chlpDy"], ["session_token", "Zicg0lBbZZ8e10BX3ifhtA"], ["created_at", "2020-06-12 09:26:17.394923"], ["updated_at", "2020-06-12 09:26:17.394923"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Adrian Kim"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "AdrianKim@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Adrian Kim"], ["email", "AdrianKim@gmail.com"], ["password_digest", "$2a$12$m5xaOnV2Qr4DhHocbAk1ve4ld2Dfm.vBuebta/Pc.uXwQQ2923FKu"], ["session_token", "jy0peBoggbqVJ4J3amQyOQ"], ["created_at", "2020-06-12 09:26:17.654619"], ["updated_at", "2020-06-12 09:26:17.654619"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[36mServer Load (0.7ms)[0m  [1m[34mSELECT "servers".* FROM "servers"[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mChannel Load (0.7ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."server_id" = $1[0m  [["server_id", 20]]
+  ↳ db/seeds.rb:15
+  [1m[36mMessage Load (1.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."channel_id" = $1[0m  [["channel_id", 2]]
+  ↳ db/seeds.rb:15
+  [1m[36mChannel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "channels" WHERE "channels"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:15
+  [1m[36mServerUser Load (0.2ms)[0m  [1m[34mSELECT "server_users".* FROM "server_users" WHERE "server_users"."server_id" = $1[0m  [["server_id", 20]]
+  ↳ db/seeds.rb:15
+  [1m[36mServer Destroy (0.4ms)[0m  [1m[31mDELETE FROM "servers" WHERE "servers"."id" = $1[0m  [["id", 20]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."server_id" = $1[0m  [["server_id", 21]]
+  ↳ db/seeds.rb:15
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."channel_id" = $1[0m  [["channel_id", 3]]
+  ↳ db/seeds.rb:15
+  [1m[36mChannel Destroy (0.2ms)[0m  [1m[31mDELETE FROM "channels" WHERE "channels"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:15
+  [1m[36mServerUser Load (0.2ms)[0m  [1m[34mSELECT "server_users".* FROM "server_users" WHERE "server_users"."server_id" = $1[0m  [["server_id", 21]]
+  ↳ db/seeds.rb:15
+  [1m[36mServer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "servers" WHERE "servers"."id" = $1[0m  [["id", 21]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."server_id" = $1[0m  [["server_id", 22]]
+  ↳ db/seeds.rb:15
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."channel_id" = $1[0m  [["channel_id", 4]]
+  ↳ db/seeds.rb:15
+  [1m[36mChannel Destroy (0.3ms)[0m  [1m[31mDELETE FROM "channels" WHERE "channels"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:15
+  [1m[36mServerUser Load (0.3ms)[0m  [1m[34mSELECT "server_users".* FROM "server_users" WHERE "server_users"."server_id" = $1[0m  [["server_id", 22]]
+  ↳ db/seeds.rb:15
+  [1m[36mServer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "servers" WHERE "servers"."id" = $1[0m  [["id", 22]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mServer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "servers" WHERE "servers"."name" = $1 LIMIT $2[0m  [["name", "First Server"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mServer Create (0.4ms)[0m  [1m[32mINSERT INTO "servers" ("private", "name", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["private", false], ["name", "First Server"], ["owner_id", 29], ["created_at", "2020-06-12 09:26:17.747583"], ["updated_at", "2020-06-12 09:26:17.747583"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mServer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "servers" WHERE "servers"."name" = $1 LIMIT $2[0m  [["name", "League"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mServer Create (0.3ms)[0m  [1m[32mINSERT INTO "servers" ("private", "name", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["private", false], ["name", "League"], ["owner_id", 29], ["created_at", "2020-06-12 09:26:17.752367"], ["updated_at", "2020-06-12 09:26:17.752367"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mServer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "servers" WHERE "servers"."name" = $1 LIMIT $2[0m  [["name", "PDPSI"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mServer Create (0.3ms)[0m  [1m[32mINSERT INTO "servers" ("private", "name", "owner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["private", false], ["name", "PDPSI"], ["owner_id", 30], ["created_at", "2020-06-12 09:26:17.757004"], ["updated_at", "2020-06-12 09:26:17.757004"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[36mServerUser Load (0.2ms)[0m  [1m[34mSELECT "server_users".* FROM "server_users"[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mServer Load (0.2ms)[0m  [1m[34mSELECT  "servers".* FROM "servers" ORDER BY "servers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mServer Load (0.2ms)[0m  [1m[34mSELECT  "servers".* FROM "servers" WHERE "servers"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mServerUser Create (0.4ms)[0m  [1m[32mINSERT INTO "server_users" ("server_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["server_id", 23], ["user_id", 29], ["created_at", "2020-06-12 09:26:17.766476"], ["updated_at", "2020-06-12 09:26:17.766476"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mServer Load (0.2ms)[0m  [1m[34mSELECT  "servers".* FROM "servers" ORDER BY "servers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mServer Load (0.2ms)[0m  [1m[34mSELECT  "servers".* FROM "servers" WHERE "servers"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mServerUser Create (0.3ms)[0m  [1m[32mINSERT INTO "server_users" ("server_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["server_id", 23], ["user_id", 30], ["created_at", "2020-06-12 09:26:17.771839"], ["updated_at", "2020-06-12 09:26:17.771839"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  ↳ db/seeds.rb:23
+  [1m[36mServer Load (0.2ms)[0m  [1m[34mSELECT  "servers".* FROM "servers" ORDER BY "servers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mServer Load (0.2ms)[0m  [1m[34mSELECT  "servers".* FROM "servers" WHERE "servers"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mServerUser Create (0.3ms)[0m  [1m[32mINSERT INTO "server_users" ("server_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["server_id", 23], ["user_id", 31], ["created_at", "2020-06-12 09:26:17.776905"], ["updated_at", "2020-06-12 09:26:17.776905"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 3]]
+  ↳ db/seeds.rb:24
+  [1m[36mServer Load (0.3ms)[0m  [1m[34mSELECT  "servers".* FROM "servers" ORDER BY "servers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mServer Load (0.3ms)[0m  [1m[34mSELECT  "servers".* FROM "servers" WHERE "servers"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mServerUser Create (0.3ms)[0m  [1m[32mINSERT INTO "server_users" ("server_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["server_id", 23], ["user_id", 32], ["created_at", "2020-06-12 09:26:17.783024"], ["updated_at", "2020-06-12 09:26:17.783024"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mServer Load (0.3ms)[0m  [1m[34mSELECT  "servers".* FROM "servers" ORDER BY "servers"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mServer Load (0.3ms)[0m  [1m[34mSELECT  "servers".* FROM "servers" WHERE "servers"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mServerUser Create (0.4ms)[0m  [1m[32mINSERT INTO "server_users" ("server_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["server_id", 24], ["user_id", 29], ["created_at", "2020-06-12 09:26:17.789346"], ["updated_at", "2020-06-12 09:26:17.789346"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mServer Load (0.4ms)[0m  [1m[34mSELECT  "servers".* FROM "servers" ORDER BY "servers"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mServer Load (0.3ms)[0m  [1m[34mSELECT  "servers".* FROM "servers" WHERE "servers"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mServerUser Create (0.3ms)[0m  [1m[32mINSERT INTO "server_users" ("server_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["server_id", 24], ["user_id", 30], ["created_at", "2020-06-12 09:26:17.796038"], ["updated_at", "2020-06-12 09:26:17.796038"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 3]]
+  ↳ db/seeds.rb:28
+  [1m[36mServer Load (0.2ms)[0m  [1m[34mSELECT  "servers".* FROM "servers" ORDER BY "servers"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mServer Load (0.2ms)[0m  [1m[34mSELECT  "servers".* FROM "servers" WHERE "servers"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mServerUser Create (0.3ms)[0m  [1m[32mINSERT INTO "server_users" ("server_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["server_id", 24], ["user_id", 32], ["created_at", "2020-06-12 09:26:17.801527"], ["updated_at", "2020-06-12 09:26:17.801527"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mServer Load (0.2ms)[0m  [1m[34mSELECT  "servers".* FROM "servers" ORDER BY "servers"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mServer Load (0.2ms)[0m  [1m[34mSELECT  "servers".* FROM "servers" WHERE "servers"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mServerUser Create (0.3ms)[0m  [1m[32mINSERT INTO "server_users" ("server_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["server_id", 25], ["user_id", 29], ["created_at", "2020-06-12 09:26:17.807114"], ["updated_at", "2020-06-12 09:26:17.807114"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mServer Load (0.2ms)[0m  [1m[34mSELECT  "servers".* FROM "servers" ORDER BY "servers"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mServer Load (0.2ms)[0m  [1m[34mSELECT  "servers".* FROM "servers" WHERE "servers"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mServerUser Create (0.3ms)[0m  [1m[32mINSERT INTO "server_users" ("server_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["server_id", 25], ["user_id", 30], ["created_at", "2020-06-12 09:26:17.812048"], ["updated_at", "2020-06-12 09:26:17.812048"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  ↳ db/seeds.rb:34
+  [1m[36mServer Load (0.2ms)[0m  [1m[34mSELECT  "servers".* FROM "servers" ORDER BY "servers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mServer Load (0.2ms)[0m  [1m[34mSELECT  "servers".* FROM "servers" WHERE "servers"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mChannel Create (0.4ms)[0m  [1m[32mINSERT INTO "channels" ("name", "server_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "General"], ["server_id", 23], ["created_at", "2020-06-12 09:26:17.816520"], ["updated_at", "2020-06-12 09:26:17.816520"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[36mServer Load (0.3ms)[0m  [1m[34mSELECT  "servers".* FROM "servers" ORDER BY "servers"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:36
+  [1m[36mServer Load (0.2ms)[0m  [1m[34mSELECT  "servers".* FROM "servers" WHERE "servers"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mChannel Create (0.3ms)[0m  [1m[32mINSERT INTO "channels" ("name", "server_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "General"], ["server_id", 24], ["created_at", "2020-06-12 09:26:17.820188"], ["updated_at", "2020-06-12 09:26:17.820188"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:36
+  [1m[36mServer Load (0.2ms)[0m  [1m[34mSELECT  "servers".* FROM "servers" ORDER BY "servers"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mServer Load (0.1ms)[0m  [1m[34mSELECT  "servers".* FROM "servers" WHERE "servers"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ db/seeds.rb:37
+  [1m[36mChannel Create (0.3ms)[0m  [1m[32mINSERT INTO "channels" ("name", "server_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "General"], ["server_id", 25], ["created_at", "2020-06-12 09:26:17.823662"], ["updated_at", "2020-06-12 09:26:17.823662"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37

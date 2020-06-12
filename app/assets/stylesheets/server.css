@@ -219,9 +219,6 @@
     border-bottom: 1px grey solid; */
 }
   
-.create-server input:focus {
-    
-}
 
 .create-server-top {
     display: flex;
