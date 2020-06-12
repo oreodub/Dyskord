@@ -20,7 +20,9 @@ class Home extends React.Component {
         <div className="friend-container">
           <div className="searchbar"></div>
         </div>
-        <ServerIndexContainer/>
+        <div className="server-container">
+            <ServerIndexContainer/>
+        </div>
         <nav className="home-nav">
           <div></div>
           <div></div>

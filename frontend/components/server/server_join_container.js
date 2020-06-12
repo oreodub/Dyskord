@@ -5,7 +5,7 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 
 
 const mSTP = (state) => ({
-    errors: state.errors,
+    errors: state.errors.server,
 })
 
 const mDTP = (dispatch) => ({

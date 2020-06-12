@@ -32,17 +32,17 @@ export const removeServer = (serverId) => (
     })
 )
 
-export const joinServer = (serverName) => (
+export const joinServer = (serverUser) => (
     $.ajax({
         method: 'POST',
         url: `/api/server_users`,
-        data: { serverName }
+        data: { serverUser }
     })
 )
-export const leaveServer = (serverId, userId) => (
+export const leaveServer = (serverUser) => (
     $.ajax({
         method: 'DELETE',
         url: `/api/server_users`,
-        data: { server_id: serverId, user_id: userId }
+        data: { serverUser }
     })
 )

@@ -3,3 +3,8 @@ bundle.js
 bundle.js*
 bundle.js.map
 /public/assets
+
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
