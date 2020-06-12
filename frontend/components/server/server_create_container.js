@@ -5,10 +5,11 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mSTP = (state) => ({
     user: state.entities.users[state.session.id],
-    errors: state.errors,
+    errors: state.errors.server,
 })
 const mDTP = (dispatch) => ({
     openModal: () => dispatch(openModal('addServer')),
+    closeModal: () => dispatch(closeModal()),
     createServer: (server) => dispatch(createServer(server)),
 })
 

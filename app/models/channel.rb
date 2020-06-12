@@ -9,7 +9,6 @@
 #  updated_at :datetime         not null
 #
 class Channel < ApplicationRecord
-    validates :name, uniqueness: true
     validates :name, :server_id, presence: true
 
     belongs_to :server

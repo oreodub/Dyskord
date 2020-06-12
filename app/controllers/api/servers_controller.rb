@@ -1,4 +1,5 @@
 class Api::ServersController < ApplicationController
+    
     def index
         @servers = Server.all
         render :index
@@ -17,21 +18,21 @@ class Api::ServersController < ApplicationController
         if @server.save
             render :show
         else
-            render json: @server.errors.full_messages, status: 422
+            render json: @server.errors.full_messages, status: 404
         end
     end
 
     def update
         @server = Server.current_user.owned_servers.find(params[:id])
         if !@server
-            render json: ['You are not the owner'], status: 403
+            render json: ['You are not the owner'], status: 422
             return
         end
 
         if @server.update(server_params)
             render :show
         else
-            render json: @server.errors.full_messages, status: 422
+            render json: @server.errors.full_messages, status: 404
         end
     end 
 
@@ -39,7 +40,7 @@ class Api::ServersController < ApplicationController
     def destroy
         @server = Server.current_user.owned_servers.find(params[:id])
         if !@server
-            render json: ['You are not the owner'], status: 403
+            render json: ['You are not the owner'], status: 422
             return
         end
         

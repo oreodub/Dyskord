@@ -3,7 +3,7 @@ import React from 'react';
 class ServerCreate extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { name: `${props.user.username}'s server`, owner_id: props.user.id, private: false };
+        this.state = { name: `${props.user.username}'s server`, ownerId: props.user.id, private: false };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -33,7 +33,9 @@ class ServerCreate extends React.Component {
                 <form action="" onSubmit={this.handleSubmit}>
                     <div className='create-server-left'>
                         <div className='create-server-title'>SERVER NAME</div>
-                        <input type="text" placeholder='Enter a Server Name' value={this.state.name} onChange={this.update('name')} />
+                        <input type="text" 
+                        placeholder='Enter a Server Name' 
+                        value={this.state.name} onChange={this.update('name')} />
                         <div className='cg'>By creating a server, you agree to Dyskord's Community Guidelines</div>
                     </div>
                     <div className='create-server-right'>

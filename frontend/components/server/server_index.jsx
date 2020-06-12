@@ -20,15 +20,14 @@ class ServerIndex extends React.Component {
 
     handleMouseOver(e) {
         e.preventDefault();
-
-        // e.currentTarget.className = 'server-name';
-        document.getElementById('create').className = 'server-name';
+        e.currentTarget.children[0].className = 'server-name';
+        // document.getElementById('create').className = 'server-name';
     }
 
     handleMouseOut(e) {
         e.preventDefault();
-        // e.currentTarget.className = 'server-name-hide';
-        document.getElementById('create').className = 'server-name-hide';
+        e.currentTarget.children[0].className = 'server-name-hide';
+        // document.getElementById('create').className = 'server-name-hide';
     }
 
     render() {
@@ -37,7 +36,9 @@ class ServerIndex extends React.Component {
 
             const serverList = servers.map(server => (
                 <li className='server' key={server.id}>
-                    <button>
+                    <button onMouseOver={this.handleMouseOver}
+                        onMouseOut={this.handleMouseOut}>
+                        <div className='server-name-hide'>{server.name}</div>
                     <Link to={`/servers/${server.id}`}>
                         {server.name.split(' ').map(word => {
                             initials += word[0].toUpperCase();
@@ -45,17 +46,17 @@ class ServerIndex extends React.Component {
                         {initials = ''}
                     </Link>
                     </button>
-                    <div className='server-name-hide'>{server.name}</div>
                 </li>
             ))
 
-        
-        
         return (
-            <div className="server-container">
+            
                 <ul className="server-index">
                     <li className='server home'>
-                        <button>
+                        <button 
+                            onMouseOver={this.handleMouseOver}
+                            onMouseOut={this.handleMouseOut}>
+                            <div className='server-name-hide'>Home</div>
                             <Link to='/servers'>
                                 <img src={window.dragonURL} className="home-drag"/>
                             </Link>
@@ -68,17 +69,15 @@ class ServerIndex extends React.Component {
 
                     <li className='server'>
                         <button 
-                        onMouseOver={this.handleMouseOver} 
-                        onMouseOut={this.handleMouseOut} 
                         onClick={this.props.openModal}
+                        onMouseOver={this.handleMouseOver}
+                        onMouseOut={this.handleMouseOut}
                         className="create">+
-                        <div id='create' className='server-name-hide'>Add Server</div>
+                        <div  className='server-name-hide'>Add Server</div>
                         </button>
-                        
-                        
                     </li>
                 </ul>
-            </div>
+
         );
 
 
