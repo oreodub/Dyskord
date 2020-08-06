@@ -5,10 +5,23 @@ class ChannelIndex extends React.Component {
         super(props);
     }
 
+    componentDidMount() {
+        this.props.getServer(this.props.match.params.serverId);
+    }
+
     render() {
+        debugger;
+        const {channels} = this.props;
+
+        const channelList = channels.map(channel => (
+            <li className='channel' key={channel.id}>
+                    <div>{channel.name}</div>
+            </li>
+            ))
+
         return (
             <div className="channel-container">
-                <div>hey</div>
+                {channelList}
             </div>
         )
     }

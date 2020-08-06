@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 class ServerIndex extends React.Component {
     constructor(props) {
         super(props);
@@ -39,7 +40,7 @@ class ServerIndex extends React.Component {
                     <button onMouseOver={this.handleMouseOver}
                         onMouseOut={this.handleMouseOut}>
                         <div className='server-name-hide'>{server.name}</div>
-                    <Link to={`/servers/${server.id}`}>
+                    <Link to={`/servers/${server.id}/channels`}>
                         {server.name.split(' ').map(word => {
                             initials += word[0].toUpperCase();
                         })}<div>{initials}</div>
@@ -72,8 +73,9 @@ class ServerIndex extends React.Component {
                         onClick={this.props.openModal}
                         onMouseOver={this.handleMouseOver}
                         onMouseOut={this.handleMouseOut}
-                        className="create">+
-                        <div  className='server-name-hide'>Add Server</div>
+                        >
+                        <div className='server-name-hide'>Add Server</div>
+                        <div className="create">+</div>
                         </button>
                     </li>
                 </ul>
