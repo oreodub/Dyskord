@@ -1,6 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import ServerIndexContainer from '../server/server_index_container'
+import ChannelIndexContainer from '../channel/channel_index_container'
+import { AuthRoute, ProtectedRoute } from '../../util/route_util';
 
 class Home extends React.Component {
   constructor(props) {
@@ -8,7 +10,6 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-    // this.props.getServers();
   }
 
   render() {
@@ -18,6 +19,7 @@ class Home extends React.Component {
     return (
       <div className="home-container">
         <div className="friend-container">
+          <ProtectedRoute exact path="/servers/:serverId/channels" component={ChannelIndexContainer} />
           <div className="searchbar"></div>
         </div>
         <div className="server-container">
