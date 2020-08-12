@@ -39,6 +39,7 @@
     font-size: 12px;
 }
 
+<<<<<<< HEAD
 .server-name-hide {
     display: none;
     position: relative;
@@ -52,6 +53,12 @@
     z-index: 1;
     font-size: 12px;
 }
+=======
+/* .server-name-hide {
+    display: block;
+    position: absolute;
+} */
+>>>>>>> 0c13ddc41abd9d7d7de8e0f57f0d41d85db4e9b8
 
 .server button a {
     color: white;
