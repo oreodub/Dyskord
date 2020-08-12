@@ -39,26 +39,10 @@
     font-size: 12px;
 }
 
-<<<<<<< HEAD
-.server-name-hide {
-    display: none;
-    position: relative;
-    width: 80px;
-    left: 60px;
-    bottom: 20px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: black;
-    color: white;
-    z-index: 1;
-    font-size: 12px;
-}
-=======
 /* .server-name-hide {
     display: block;
     position: absolute;
 } */
->>>>>>> 0c13ddc41abd9d7d7de8e0f57f0d41d85db4e9b8
 
 .server button a {
     color: white;
