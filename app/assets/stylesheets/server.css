@@ -39,9 +39,10 @@
     font-size: 12px;
 }
 
-.server-name-hide {
-    display: none;
-}
+/* .server-name-hide {
+    display: block;
+    position: absolute;
+} */
 
 .server button a {
     color: white;
