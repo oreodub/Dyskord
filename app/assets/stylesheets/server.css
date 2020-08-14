@@ -39,10 +39,10 @@
     font-size: 12px;
 }
 
-/* .server-name-hide {
-    display: block;
+.server-name-hide {
+    display: none;
     position: absolute;
-} */
+}
 
 .server button a {
     color: white;
